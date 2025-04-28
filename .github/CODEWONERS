@@ -1,0 +1,8 @@
+# Code owners for back-end and front-end
+* @front-team
+* @back-team
+
+# Revisores aleatórios
+# Todos os membros devem ser revisores
+/front/* @front-member1 @front-member2 @front-member3
+/back/* @back-member1 @back-member2 @back-member3
