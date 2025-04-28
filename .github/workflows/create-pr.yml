@@ -1,0 +1,24 @@
+name: Create PR to Dev from Back or Front
+
+on:
+  push:
+    branches:
+      - back
+      - front
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Create PR to dev
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        base: dev  # Base branch for the PR
+        head: ${{ github.ref_name }}  # Current branch (back or front)
+        title: 'Automated PR from ${{ github.ref_name }} to dev'
+        body: 'This PR was automatically created by GitHub Actions from the ${{ github.ref_name }} branch.'
