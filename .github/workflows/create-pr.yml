@@ -10,6 +10,9 @@ jobs:
   create-pr:
     runs-on: ubuntu-latest
 
+    env:
+      ACTIONS_STEP_DEBUG: true  # Habilita o debug para logs mais detalhados
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -22,3 +25,6 @@ jobs:
         branch: ${{ github.ref_name }}  # Nome da branch que gerou o push (back ou front)
         title: 'Automated PR from ${{ github.ref_name }} to dev'
         body: 'This PR was automatically created by GitHub Actions from the ${{ github.ref_name }} branch.'
+        
+    permissions:
+      pull-requests: write  # Permissão explícita para escrever PRs
