@@ -1,0 +1,39 @@
+name: Auto Create PR to Dev
+
+on:
+  push:
+    branches:
+      - front
+      - back
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create Pull Request
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            try {
+              const { repo, owner } = context.repo;
+              const branchName = context.ref.split('/')[2]; // Pega o nome da branch (front ou back)
+              const result = await github.rest.pulls.create({
+                owner,
+                repo,
+                title: `Merge changes from ${branchName} to dev`,
+                head: branchName,  // Usando o nome da branch como head
+                base: 'dev',
+                body: `Automated pull request created after push to ${branchName} branch`
+              });
+              console.log('PR Created:', result.data.html_url);
+            } catch (error) {
+              console.error('Error creating PR:', error);
+              throw error;
+            }
