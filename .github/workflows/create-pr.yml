@@ -1,30 +1,28 @@
-name: Create PR to Dev from Back or Front
+name: Criar Pull Request para Dev
 
 on:
   push:
     branches:
-      - back
       - front
+      - back
 
 jobs:
   create-pr:
     runs-on: ubuntu-latest
-
-    env:
-      ACTIONS_STEP_DEBUG: true  # Habilita o debug para logs mais detalhados
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checar repositório
+        uses: actions/checkout@v2
 
-    - name: Create PR to dev
-      uses: peter-evans/create-pull-request@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        base: dev  # Branch base (destino do PR)
-        branch: ${{ github.ref_name }}  # Nome da branch que gerou o push (back ou front)
-        title: 'Automated PR from ${{ github.ref_name }} to dev'
-        body: 'This PR was automatically created by GitHub Actions from the ${{ github.ref_name }} branch.'
-        
-    permissions:
-      pull-requests: write  # Permissão explícita para escrever PRs
+      - name: Configurar Git
+        run: |
+          git config user.name "Seu Nome"
+          git config user.email "seu-email@example.com"
+      
+      - name: Criar um Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: dev
+          branch: ${{ github.ref_name }}  # Usando 'branch' ao invés de 'head'
+          title: "Merge de ${GITHUB_REF} para dev"
+          body: "PR automático gerado para o branch ${GITHUB_REF}."
