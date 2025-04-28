@@ -18,7 +18,7 @@ jobs:
       uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        base: dev  # Base branch for the PR
-        head: ${{ github.ref_name }}  # Current branch (back or front)
+        base: dev  # Branch base (destino do PR)
+        branch: ${{ github.ref_name }}  # Nome da branch que gerou o push (back ou front)
         title: 'Automated PR from ${{ github.ref_name }} to dev'
         body: 'This PR was automatically created by GitHub Actions from the ${{ github.ref_name }} branch.'
