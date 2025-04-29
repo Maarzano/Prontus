@@ -23,29 +23,47 @@ jobs:
           script: |
             try {
               const { repo, owner } = context.repo;
-              const branchName = context.ref.split('/')[2]; // Pega o nome da branch (front ou back)
-              
-              // Passo 1: Obter todos os colaboradores do repositório
-              const collaborators = await github.rest.repos.listCollaborators({
-                owner,
-                repo
-              });
+              const branchName = context.ref.split('/')[2];
+              const pusher = context.actor;
 
-              // Passo 2: Sortear um colaborador aleatório
-              const randomReviewer = collaborators.data[Math.floor(Math.random() * collaborators.data.length)];
+              // Passo 1: Listar colaboradores com permissão de push (excluindo bots e o próprio autor)
+              const collabsResponse = await github.rest.repos.listCollaborators({ owner, repo });
+              const reviewers = collabsResponse.data
+                .filter(user => user.permissions.push && user.login !== pusher && !user.login.includes('[bot]'));
+
+              if (reviewers.length === 0) {
+                console.log("Nenhum revisor disponível.");
+                return;
+              }
+
+              // Passo 2: Sorteia 2 revisores
+              const shuffled = reviewers.sort(() => 0.5 - Math.random());
+              const selectedReviewers = shuffled.slice(0, 2).map(u => u.login);
 
               // Passo 3: Criar o Pull Request
               const result = await github.rest.pulls.create({
                 owner,
                 repo,
                 title: `Merge changes from ${branchName} to dev`,
-                head: branchName,  // Usando o nome da branch como head
+                head: branchName,
                 base: 'dev',
-                body: `Automated pull request created after push to ${branchName} branch`,
-                requested_reviewers: [randomReviewer.login]  // Adiciona o revisor sorteado
+                body: `Automated PR triggered by push to ${branchName}`,
               });
-              console.log('PR Created:', result.data.html_url);
+
+              const prNumber = result.data.number;
+
+              // Passo 4: Solicitar revisão
+              await github.rest.pulls.requestReviewers({
+                owner,
+                repo,
+                pull_number: prNumber,
+                reviewers: selectedReviewers
+              });
+
+              console.log(`PR criado: ${result.data.html_url}`);
+              console.log(`Revisores: ${selectedReviewers.join(", ")}`);
+
             } catch (error) {
-              console.error('Error creating PR:', error);
+              console.error("Erro ao criar PR ou atribuir revisores:", error);
               throw error;
             }
