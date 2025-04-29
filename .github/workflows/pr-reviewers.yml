@@ -1,0 +1,41 @@
+name: Assign Reviewers
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  assign-reviewers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Selecionar e atribuir revisores
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const reviewers = [
+              "Maarzano", // substitua pelos nomes dos colaboradores (login do GitHub)
+              "Arthur-Alvess",
+              "bragazx9",
+              "GabrielTurok",
+              "IsaacSouzaaa",
+              "JoaoLucasdCB"
+            ];
+
+            function escolherRevisores(lista, quantidade) {
+              const embaralhado = lista.sort(() => 0.5 - Math.random());
+              return embaralhado.slice(0, quantidade);
+            }
+
+            const numeroDeRevisores = 2;
+            const escolhidos = escolherRevisores(reviewers, numeroDeRevisores);
+
+            console.log(`Revisores escolhidos: ${escolhidos}`);
+
+            await github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              reviewers: escolhidos
+            });
