@@ -26,15 +26,15 @@ public class MedicalRecord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "medicalRecord_id")
+    @Column(name = "medical_record_id")
     private long id;
 
     @OneToOne
     @JoinColumn(name = "scheduling_id", referencedColumnName = "scheduling_id")
     private Scheduling scheduling_id;;
 
-    @Column(name = "dateRegister", nullable = false )
-    private LocalDateTime date_Register;
+    @Column(name = "date_register", nullable = false )
+    private LocalDateTime dateRegister;
 
     @Column(name = "diagnostic", nullable = false, unique = false)
     @Enumerated(EnumType.STRING)
