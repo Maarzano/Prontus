@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import InoDev.Prontus.Models.Patient;
 
 @Repository
-public class PatientRepository extends JpaRepository<Patient, Long>{
+public interface PatientRepository extends JpaRepository<Patient, Long>{
 
 }
