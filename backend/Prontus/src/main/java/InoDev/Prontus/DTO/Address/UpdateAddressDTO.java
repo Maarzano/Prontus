@@ -1,8 +1,10 @@
 package InoDev.Prontus.DTO.Address;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class UpdateAddressDTO {
     private String street;
     private String cep;
