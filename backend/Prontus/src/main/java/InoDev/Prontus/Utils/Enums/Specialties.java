@@ -1,4 +1,4 @@
-package InoDev.Prontus.Utils;
+package InoDev.Prontus.Utils.Enums;
 
 public enum Specialties {
     ACUPUNTURA,
@@ -7,8 +7,8 @@ public enum Specialties {
     ANGIIOLOGIA,
     CARDIOLOGIA,
     CIRURGIA_CARDIOVASCULAR,
-    CIRURGIA_DA_MÃO,
-    CIRURGIA_DE_CABEÇA_E_PESCOÇO,
+    CIRURGIA_DA_MAO,
+    CIRURGIA_DE_CABECA_E_PESCOCO,
     CIRURGIA_DO_APARELHO_DIGESTIVO,
     CIRURGIA_GERAL,
     CIRURGIA_ONCOLOGICA,
