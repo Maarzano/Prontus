@@ -19,24 +19,24 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "address_id", unique=true,nullable=false)
+    @Column(name = "address_id")
     private long address_id;
 
-    @Column(name="street", nullable = false, unique=false)
+    @Column(name="street", nullable = false, unique = false)
     private String street;
 
-    @Column(name="cep", nullable = false, columnDefinition= "CHAR(8)", length = 8, unique=false)
-    private long cep;
+    @Column(name="cep", nullable = false, length = 9, unique = false)
+    private String cep;
 
-    @Column(name="number", nullable=false, unique=false)
+    @Column(name="number", nullable = false, unique = false)
     private String number;
 
-    @Column(name="neighborhood", nullable = false, unique=false)
+    @Column(name="neighborhood", nullable = false, unique = false)
     private String neighborhood;
 
-    @Column(name="city", nullable = false, unique=false)
+    @Column(name="city", nullable = false, unique = false)
     private String city;
 
-    @Column(name="country", nullable = false, unique=false)
-    private String country;
+    @Column(name="state", nullable = false, unique = false, columnDefinition = "CHAR(2)")
+    private String state;
 }

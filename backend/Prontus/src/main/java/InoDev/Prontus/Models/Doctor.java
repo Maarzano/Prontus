@@ -1,11 +1,12 @@
 package InoDev.Prontus.Models;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,19 +24,19 @@ public class Doctor {
     @Column(name = "doctor_id")
     private long id;
 
-    @Column(name = "name", nullable = false, unique = false)
-    private String name;
-
-    @Column(name = "crm", nullable = false, unique = true)
+    @Column(name = "doctor_crm", nullable = false, unique = true, length = 20)
     private String crm;
 
-    @Column(name = "", nullable = false, unique = false)
-    private specialty specialty;
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
+    private User user;
 
-    @Column(name = "cellphone", unique = true, nullable = true)
-    private String cellphone;
+    @ManyToOne
+    @JoinColumn(name = "specialty_id", nullable = false, unique = false, referencedColumnName = "specialty_id")
+    private Specialty specialty;
 
-    @Column(name = "actived", nullable = false, unique = false)
-    private Boolean actived;
-
+    @ManyToOne
+    @JoinColumn(name = "address_id", unique = false, nullable = true, referencedColumnName = "address_id")
+    private Address address;
+    
 }

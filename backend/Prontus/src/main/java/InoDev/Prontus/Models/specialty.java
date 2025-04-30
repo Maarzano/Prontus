@@ -1,24 +1,21 @@
 package InoDev.Prontus.Models;
 
-import InoDev.Prontus.Utils.Specialties;
+import InoDev.Prontus.Utils.Enums.Specialties;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter @Setter
-@Table(name = "specialty")
-public class specialty {
+@Table(name = "specialties")
+public class Specialty {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "specilaty_id", unique = true, nullable = false)
+    @Column(name = "specialty_id")
     private long id;
 
     @Column(name = "specialty_type", nullable= false,  unique = false)
