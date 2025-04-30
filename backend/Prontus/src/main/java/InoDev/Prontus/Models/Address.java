@@ -20,7 +20,7 @@ public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "address_id")
-    private long address_id;
+    private long id;
 
     @Column(name="street", nullable = false, unique = false)
     private String street;
