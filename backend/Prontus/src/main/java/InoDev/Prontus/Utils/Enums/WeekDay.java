@@ -1,6 +1,6 @@
 package InoDev.Prontus.Utils.Enums;
 
-public enum DiaSemana {
+public enum WeekDay {
     DOMINGO,
     SEGUNDA,
     TERCA,
