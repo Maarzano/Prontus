@@ -9,7 +9,7 @@ import InoDev.Prontus.Utils.Enums.Diagnostics;
 
 @Data
 @AllArgsConstructor
-public class UpdateMedicalRecord {
+public class UpdateMedicalRecordDTO {
     private LocalDateTime dateRegister;
     private Diagnostics diagnostic;
     private String recepie;

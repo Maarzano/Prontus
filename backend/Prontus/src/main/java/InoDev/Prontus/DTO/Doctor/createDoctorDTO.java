@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class createDoctorDTO {
+public class CreateDoctorDTO {
     private String crm;
     private long userId;
     private long specialtyId;

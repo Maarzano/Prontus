@@ -7,7 +7,7 @@ import InoDev.Prontus.Utils.Enums.Diagnostics;
 
 @Data
 @AllArgsConstructor
-public class CreateMedicalRecord {
+public class CreateMedicalRecordDTO {
     private long schedulingId;
     private Diagnostics diagnostic;
     private String recepie;
