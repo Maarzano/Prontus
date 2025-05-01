@@ -1,0 +1,16 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #F3F3F3;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.text-field, .password-field {
+    -fx-border-color: #6A0DAD;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
