@@ -1,36 +1,35 @@
 package InoDev.Prontus.Mappers;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
-
 import InoDev.Prontus.DTO.AvailableTime.*;
 import InoDev.Prontus.Models.AvailableTime;
+import InoDev.Prontus.Models.Doctor;
 
-@Mapper(componentModel = "spring")
-public interface AvailableTimeMapper {
-    AvailableTimeMapper INSTANCE = Mappers.getMapper(AvailableTimeMapper.class);
+public class AvailableTimeMapper {
 
-    @Mapping(source = "doctorId", target = "doctor.id")
-    @Mapping(source = "startTime", target = "starttime", qualifiedByName = "localTimeToSqlTime")
-    @Mapping(source = "endTime", target = "endtime", qualifiedByName = "localTimeToSqlTime")
-    AvailableTime toModel(CreateAvailableTimeDTO dto);
-
-    @Mapping(source = "doctorId", target = "doctor.id")
-    @Mapping(source = "startTime", target = "starttime", qualifiedByName = "localTimeToSqlTime")
-    @Mapping(source = "endTime", target = "endtime", qualifiedByName = "localTimeToSqlTime")
-    AvailableTime toModel(UpdateAvailableTimeDTO dto);
-
-    @Mapping(source = "doctor.id", target = "doctorId")
-    @Mapping(source = "starttime", target = "startTime", qualifiedByName = "sqlTimeToLocalTime")
-    @Mapping(source = "endtime", target = "endTime", qualifiedByName = "sqlTimeToLocalTime")
-    AvailableTimeDTO toDTO(AvailableTime availableTime);
-
-    default java.sql.Time localTimeToSqlTime(java.time.LocalTime localTime) {
-        return localTime == null ? null : java.sql.Time.valueOf(localTime);
+    public static AvailableTime toModel(CreateAvailableTimeDTO dto, Doctor doctor) {
+        AvailableTime availableTime = new AvailableTime();
+        availableTime.setDoctor(doctor);
+        availableTime.setDaysweek(dto.getDaysweek());
+        availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
+        availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+        return availableTime;
     }
 
-    default java.time.LocalTime sqlTimeToLocalTime(java.sql.Time sqlTime) {
-        return sqlTime == null ? null : sqlTime.toLocalTime();
+    public static AvailableTime toModel(UpdateAvailableTimeDTO dto, AvailableTime availableTime, Doctor doctor) {
+        availableTime.setDoctor(doctor);
+        availableTime.setDaysweek(dto.getDaysweek());
+        availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
+        availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+        return availableTime;
+    }
+
+    public static AvailableTimeDTO toDTO(AvailableTime availableTime) {
+        return new AvailableTimeDTO(
+            availableTime.getId(),
+            availableTime.getDoctor().getId(),
+            availableTime.getDaysweek(),
+            availableTime.getStarttime().toLocalTime(),
+            availableTime.getEndtime().toLocalTime()
+        );
     }
 }

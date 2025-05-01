@@ -1,18 +1,40 @@
 package InoDev.Prontus.Mappers;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
-
 import InoDev.Prontus.DTO.Address.*;
 import InoDev.Prontus.Models.Address;
 
-@Mapper(componentModel = "spring")
-public interface AddressMapper {
-    AddressMapper INSTANCE = Mappers.getMapper(AddressMapper.class);
+public class AddressMapper {
 
-    Address toModel(CreateAddressDTO dto);
+    public static Address toModel(CreateAddressDTO dto) {
+        Address address = new Address();
+        address.setStreet(dto.getStreet());
+        address.setCep(dto.getCep());
+        address.setNumber(dto.getNumber());
+        address.setNeighborhood(dto.getNeighborhood());
+        address.setCity(dto.getCity());
+        address.setState(dto.getState());
+        return address;
+    }
 
-    Address toModel(UpdateAddressDTO dto);
+    public static Address toModel(UpdateAddressDTO dto, Address address) {
+        address.setStreet(dto.getStreet());
+        address.setCep(dto.getCep());
+        address.setNumber(dto.getNumber());
+        address.setNeighborhood(dto.getNeighborhood());
+        address.setCity(dto.getCity());
+        address.setState(dto.getState());
+        return address;
+    }
 
-    AddressDTO toDTO(Address address);
+    public static AddressDTO toDTO(Address address) {
+        return new AddressDTO(
+            address.getId(),
+            address.getStreet(),
+            address.getCep(),
+            address.getNumber(),
+            address.getNeighborhood(),
+            address.getCity(),
+            address.getState()
+        );
+    }
 }

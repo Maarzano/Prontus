@@ -1,24 +1,49 @@
 package InoDev.Prontus.Mappers;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
-
 import InoDev.Prontus.DTO.Patient.*;
 import InoDev.Prontus.Models.Patient;
+import InoDev.Prontus.Models.Address;
 
-@Mapper(componentModel = "spring")
-public interface PatientMapper {
-    PatientMapper INSTANCE = Mappers.getMapper(PatientMapper.class);
+public class PatientMapper {
 
-    @Mapping(source = "addressId", target = "address.id")
-    Patient toModel(CreatePatientDTO dto);
+    public static Patient toModel(CreatePatientDTO dto, Address address) {
+        Patient patient = new Patient();
+        patient.setName(dto.getName());
+        patient.setCpf(dto.getCpf());
+        patient.setDataNasc(java.sql.Date.valueOf(dto.getDataNasc()));
+        patient.setCellphone(dto.getCellphone());
+        patient.setEmail(dto.getEmail());
+        patient.setAddress(address);
+        return patient;
+    }
 
-    @Mapping(source = "addressId", target = "address.id")
-    Patient toModel(UpdatePatientDTO dto);
+    public static Patient toModel(UpdatePatientDTO dto, Patient patient, Address address) {
+        patient.setName(dto.getName());
+        patient.setDataNasc(java.sql.Date.valueOf(dto.getDataNasc()));
+        patient.setCellphone(dto.getCellphone());
+        patient.setEmail(dto.getEmail());
+        patient.setAddress(address);
+        return patient;
+    }
 
-    @Mapping(source = "address.id", target = "addressId")
-    PatientDTO toDTO(Patient patient);
+    public static PatientDTO toDTO(Patient patient) {
+        return new PatientDTO(
+            patient.getId(),
+            patient.getName(),
+            patient.getCpf(),
+            patient.getDataNasc().toLocalDate(),
+            patient.getCellphone(),
+            patient.getEmail(),
+            patient.getAddress() != null ? patient.getAddress().getId() : 0
+        );
+    }
 
-    PatientSummaryDTO toSummaryDTO(Patient patient);
+    public static PatientSummaryDTO toSummaryDTO(Patient patient) {
+        return new PatientSummaryDTO(
+            patient.getId(),
+            patient.getName(),
+            patient.getCpf(),
+            patient.getEmail()
+        );
+    }
 }

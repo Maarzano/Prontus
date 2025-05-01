@@ -1,22 +1,37 @@
 package InoDev.Prontus.Mappers;
 
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.factory.Mappers;
-
 import InoDev.Prontus.DTO.MedicalRecord.*;
 import InoDev.Prontus.Models.MedicalRecord;
+import InoDev.Prontus.Models.Scheduling;
 
-@Mapper(componentModel = "spring")
-public interface MedicalRecordMapper {
-    MedicalRecordMapper INSTANCE = Mappers.getMapper(MedicalRecordMapper.class);
+public class MedicalRecordMapper {
 
-    @Mapping(source = "schedulingId", target = "scheduling.id")
-    MedicalRecord toModel(CreateMedicalRecordDTO dto);
+    public static MedicalRecord toModel(CreateMedicalRecordDTO dto, Scheduling scheduling) {
+        MedicalRecord medicalRecord = new MedicalRecord();
+        medicalRecord.setSchedulingId(scheduling);
+        medicalRecord.setDateRegister(java.time.LocalDateTime.now());
+        medicalRecord.setDiagnostic(dto.getDiagnostic());
+        medicalRecord.setRecepie(dto.getRecepie());
+        medicalRecord.setAnotation(dto.getAnotation());
+        return medicalRecord;
+    }
 
-    @Mapping(source = "schedulingId", target = "scheduling.id")
-    MedicalRecord toModel(UpdateMedicalRecordDTO dto);
+    public static MedicalRecord toModel(UpdateMedicalRecordDTO dto, MedicalRecord medicalRecord) {
+        medicalRecord.setDateRegister(dto.getDateRegister());
+        medicalRecord.setDiagnostic(dto.getDiagnostic());
+        medicalRecord.setRecepie(dto.getRecepie());
+        medicalRecord.setAnotation(dto.getAnotation());
+        return medicalRecord;
+    }
 
-    @Mapping(source = "scheduling.id", target = "schedulingId")
-    MedicalRecordDTO toDTO(MedicalRecord medicalRecord);
+    public static MedicalRecordDTO toDTO(MedicalRecord medicalRecord) {
+        return new MedicalRecordDTO(
+            medicalRecord.getId(),
+            medicalRecord.getSchedulingId().getId(),
+            medicalRecord.getDateRegister(),
+            medicalRecord.getDiagnostic(),
+            medicalRecord.getRecepie(),
+            medicalRecord.getAnotation()
+        );
+    }
 }
