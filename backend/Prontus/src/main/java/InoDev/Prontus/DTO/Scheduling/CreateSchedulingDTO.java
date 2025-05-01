@@ -9,8 +9,8 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class CreateSchedulingDTO {
-    private long patient;
-    private long doctor;
+    private long patientId;
+    private long doctorId;
     private LocalDateTime dateTime;
     private StatusScheduling statusScheduling;
 }

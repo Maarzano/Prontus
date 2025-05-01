@@ -9,5 +9,5 @@ public class DoctorSummaryDTO {
     private long id;
     private String crm;
     private String name;
-    private String specialtyName; 
+    private String specialtyName;
 }

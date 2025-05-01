@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class UpdateDoctorDTO {
     private String crm;
-    private Long specialtyId;
-    private Long addressId; 
+    private long specialtyId;
+    private long addressId; 
 }

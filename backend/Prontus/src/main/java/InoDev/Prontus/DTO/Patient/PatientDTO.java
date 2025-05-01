@@ -1,6 +1,5 @@
 package InoDev.Prontus.DTO.Patient;
 
-import InoDev.Prontus.DTO.Address.AddressDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -15,5 +14,5 @@ public class PatientDTO {
     private Date dataNasc;
     private String cellphone;
     private String email;
-    private AddressDTO address;
+    private long addressId;
 }
