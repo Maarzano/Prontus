@@ -31,7 +31,7 @@ public class MedicalRecord {
 
     @OneToOne
     @JoinColumn(name = "scheduling_id", referencedColumnName = "scheduling_id")
-    private Scheduling scheduling_id;
+    private Scheduling schedulingId;
 
     @Column(name = "date_register", nullable = false )
     private LocalDateTime dateRegister;

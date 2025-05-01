@@ -11,7 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,7 +29,7 @@ public class AvailableTime {
     @Column(name = "available_time_id")
     private long id;
     
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "doctor_id", unique = false, nullable = false, referencedColumnName = "doctor_id")
     private Doctor doctor;
 
