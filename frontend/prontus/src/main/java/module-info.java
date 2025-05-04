@@ -4,4 +4,5 @@ module inodev {
 
     opens inodev to javafx.fxml;
     exports inodev;
+    opens inodev.controllers to javafx.fxml;
 }
