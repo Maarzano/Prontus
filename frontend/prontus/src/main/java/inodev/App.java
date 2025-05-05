@@ -17,9 +17,17 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         scene = new Scene(loadFXML("loginTeste"), 640, 480);
         scene.getStylesheets().add(App.class.getResource("/inodev/styles/styles.css").toExternalForm()); // Fixed path
         stage.setTitle("Prontus - Login");
+=======
+        scene = new Scene(loadFXML("ListasCadastros"), 1920, 1005);
+>>>>>>> Stashed changes
+=======
+        scene = new Scene(loadFXML("ListasCadastros"), 1920, 1005);
+>>>>>>> Stashed changes
         stage.setScene(scene);
         stage.show();
     }
