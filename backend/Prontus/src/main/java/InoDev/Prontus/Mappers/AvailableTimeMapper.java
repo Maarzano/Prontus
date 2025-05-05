@@ -16,12 +16,26 @@ public class AvailableTimeMapper {
     }
 
     public static AvailableTime toModel(UpdateAvailableTimeDTO dto, AvailableTime availableTime, Doctor doctor) {
+        if (availableTime == null || doctor == null) {
+            throw new IllegalArgumentException("AvailableTime and Doctor cannot be null");
+        }
         availableTime.setDoctor(doctor);
-        availableTime.setDaysweek(dto.getDaysweek());
-        availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
-        availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+    
+        if (dto.getDaysweek() != null) {
+            availableTime.setDaysweek(dto.getDaysweek());
+        }
+    
+        if (dto.getStartTime() != null) {
+            availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
+        }
+    
+        if (dto.getEndTime() != null) {
+            availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+        }
+    
         return availableTime;
     }
+    
 
     public static AvailableTimeDTO toDTO(AvailableTime availableTime) {
         return new AvailableTimeDTO(

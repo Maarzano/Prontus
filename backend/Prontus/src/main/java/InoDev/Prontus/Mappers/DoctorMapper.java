@@ -16,11 +16,21 @@ public class DoctorMapper {
     }
 
     public static Doctor toModel(UpdateDoctorDTO dto, Doctor doctor, Specialty specialty, Address address) {
-        doctor.setCrm(dto.getCrm());
-        doctor.setSpecialty(specialty);
-        doctor.setAddress(address);
+        if (dto.getCrm() != null) {
+            doctor.setCrm(dto.getCrm());
+        }
+    
+        if (specialty != null) {
+            doctor.setSpecialty(specialty);
+        }
+    
+        if (address != null) {
+            doctor.setAddress(address);
+        }
+    
         return doctor;
     }
+    
 
     public static DoctorDTO toDTO(Doctor doctor) {
         return new DoctorDTO(

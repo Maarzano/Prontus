@@ -18,13 +18,29 @@ public class PatientMapper {
     }
 
     public static Patient toModel(UpdatePatientDTO dto, Patient patient, Address address) {
-        patient.setName(dto.getName());
-        patient.setDataNasc(java.sql.Date.valueOf(dto.getDataNasc()));
-        patient.setCellphone(dto.getCellphone());
-        patient.setEmail(dto.getEmail());
-        patient.setAddress(address);
+        if (dto.getName() != null) {
+            patient.setName(dto.getName());
+        }
+    
+        if (dto.getDataNasc() != null) {
+            patient.setDataNasc(java.sql.Date.valueOf(dto.getDataNasc()));
+        }
+    
+        if (dto.getCellphone() != null) {
+            patient.setCellphone(dto.getCellphone());
+        }
+    
+        if (dto.getEmail() != null) {
+            patient.setEmail(dto.getEmail());
+        }
+    
+        if (address != null) {
+            patient.setAddress(address);
+        }
+    
         return patient;
     }
+    
 
     public static PatientDTO toDTO(Patient patient) {
         return new PatientDTO(

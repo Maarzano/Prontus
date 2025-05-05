@@ -17,12 +17,25 @@ public class MedicalRecordMapper {
     }
 
     public static MedicalRecord toModel(UpdateMedicalRecordDTO dto, MedicalRecord medicalRecord) {
-        medicalRecord.setDateRegister(dto.getDateRegister());
-        medicalRecord.setDiagnostic(dto.getDiagnostic());
-        medicalRecord.setRecepie(dto.getRecepie());
-        medicalRecord.setAnotation(dto.getAnotation());
+        if (dto.getDateRegister() != null) {
+            medicalRecord.setDateRegister(dto.getDateRegister());
+        }
+    
+        if (dto.getDiagnostic() != null) {
+            medicalRecord.setDiagnostic(dto.getDiagnostic());
+        }
+    
+        if (dto.getRecepie() != null) {
+            medicalRecord.setRecepie(dto.getRecepie());
+        }
+    
+        if (dto.getAnotation() != null) {
+            medicalRecord.setAnotation(dto.getAnotation());
+        }
+    
         return medicalRecord;
     }
+    
 
     public static MedicalRecordDTO toDTO(MedicalRecord medicalRecord) {
         return new MedicalRecordDTO(
