@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1904.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaeaf5" height="64.0" layoutX="170.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="106.0" />
+            <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="46.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cora-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="84.0" fitWidth="80.0" layoutX="1780.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@perfil-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Line endX="70.0" endY="-1.0" layoutX="302.0" layoutY="30.0" startX="70.0" startY="73.0" stroke="WHITE" />
+            <Text fill="WHITE" layoutX="164.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Text>
+            <Text fill="#5a39d2" layoutX="609.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="CADASTRAMENTO ADMIN NORMAL">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="60.0" fitWidth="56.0" layoutX="192.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" style="FX: dropshadow(gaussian, black, 5, 0.3, 2, 2);">
+               <image>
+                  <Image url="@next.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="458.0" layoutX="232.0" layoutY="359.0" stroke="BLACK" strokeType="INSIDE" width="1558.0" />
+            <Text layoutX="299.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="304.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="310.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="310.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="315.0" layoutY="709.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="1011.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Text>
+            <TextArea layoutX="589.0" layoutY="408.0" prefHeight="48.0" prefWidth="1044.0" />
+            <TextArea layoutX="466.0" layoutY="477.0" prefHeight="48.0" prefWidth="546.0" />
+            <TextArea layoutX="473.0" layoutY="619.0" prefHeight="48.0" prefWidth="522.0" />
+            <TextArea layoutX="1139.0" layoutY="626.0" prefHeight="48.0" prefWidth="492.0" />
+            <TextArea layoutX="473.0" layoutY="688.0" prefHeight="48.0" prefWidth="1162.0" />
+            <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2;" text="VOLTAR" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <Button layoutX="954.0" layoutY="876.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2;" text="SALVAR " textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Button>
+            <Text fill="RED" layoutX="397.0" layoutY="1023.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEPOIS DAQUI, ELE IRA PARA LISTAGEM DE ADMS, CASO PRECISE EXCLUIR ALGUM">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Text>
+            <DatePicker layoutX="672.0" layoutY="548.0" prefHeight="47.0" prefWidth="322.0" />
+            <Button layoutX="1764.0" layoutY="54.0" mnemonicParsing="false" opacity="0.0" prefHeight="44.0" prefWidth="52.0" text="perfil" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

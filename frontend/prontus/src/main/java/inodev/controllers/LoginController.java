@@ -1,4 +1,4 @@
-package inodev;
+package inodev.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

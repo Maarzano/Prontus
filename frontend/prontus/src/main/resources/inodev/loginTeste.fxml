@@ -9,7 +9,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Pos?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.LoginController">
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.LoginController">
     <padding>
         <Insets top="30.0" right="30.0" bottom="30.0" left="30.0" />
     </padding>
