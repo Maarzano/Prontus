@@ -14,7 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" layoutX="-14.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1916.0">
@@ -51,7 +50,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="448.0" layoutX="206.0" layoutY="316.0" stroke="BLACK" strokeType="INSIDE" width="1488.0" />
-      <TextField layoutX="448.0" layoutY="429.0" prefHeight="44.0" prefWidth="401.0">
+      <TextField layoutX="448.0" layoutY="429.0" prefHeight="44.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -61,52 +60,52 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="449.0" layoutY="499.0" prefHeight="39.0" prefWidth="1037.0">
+      <TextField layoutX="449.0" layoutY="499.0" prefHeight="39.0" prefWidth="395.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="450.0" layoutY="555.0" prefHeight="49.0" prefWidth="395.0">
+      <TextField layoutX="450.0" layoutY="555.0" prefHeight="49.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="440.0" layoutY="637.0" prefHeight="39.0" prefWidth="1051.0">
+      <TextField layoutX="445.0" layoutY="624.0" prefHeight="39.0" prefWidth="1043.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Text layoutX="254.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
+      <Text layoutX="251.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="258.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRM:">
+      <Text layoutX="251.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="861.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+      <Text layoutX="881.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="271.0" layoutY="672.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+      <Text layoutX="251.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="263.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Situação:">
+      <Text layoutX="251.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="265.0" layoutY="595.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+      <Text layoutX="251.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <TextField layoutX="990.0" layoutY="557.0" prefHeight="44.0" prefWidth="497.0">
+      <TextField layoutX="1020.0" layoutY="494.0" prefHeight="44.0" prefWidth="465.0">
          <font>
             <Font size="18.0" />
          </font>
