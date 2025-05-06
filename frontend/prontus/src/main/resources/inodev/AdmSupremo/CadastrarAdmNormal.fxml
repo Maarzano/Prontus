@@ -92,9 +92,9 @@
             </Text>
             <TextField fx:id="nomeField" layoutX="589.0" layoutY="408.0" prefHeight="48.0" prefWidth="1044.0" />
             <TextField fx:id="cpfField" layoutX="466.0" layoutY="477.0" prefHeight="48.0" prefWidth="546.0" />
-            <PasswordField fx:id="senhaField" layoutX="466.0" layoutY="612.0" prefHeight="48.0" prefWidth="492.0" />
+            <TextField fx:id="celularField" layoutX="466.0" layoutY="612.0" prefHeight="48.0" prefWidth="492.0" />
             <TextField fx:id="emailField" layoutX="1137.0" layoutY="551.0" prefHeight="48.0" prefWidth="370.0" />
-            <TextField fx:id="celularField" layoutX="463.0" layoutY="551.0" prefHeight="48.0" prefWidth="546.0" />
+            <PasswordField fx:id="senhaField" layoutX="463.0" layoutY="551.0" prefHeight="48.0" prefWidth="546.0" />
             <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="VOLTAR" textFill="WHITE">
                <font>
                   <Font size="26.0" />

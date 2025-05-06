@@ -51,7 +51,7 @@ public class TelaCadastrarAdmNormalController {
 
             String jsonInputString = String.format(
                 "{\"name\": \"%s\", \"cpf\": \"%s\", \"email\": \"%s\", \"cellphone\": \"%s\", \"password\": \"%s\", \"role\": \"ADM\"}",
-                nome, cpf, email, senha, celular
+                nome, cpf, email, celular, senha
             );
 
             try (OutputStreamWriter writer = new OutputStreamWriter(conn.getOutputStream())) {
