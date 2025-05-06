@@ -29,7 +29,6 @@ public class Patient {
     @Column(name = "patient_cpf", nullable = false, unique = true, columnDefinition = "CHAR(11)")
     private String cpf;
 
-    @NotBlank(message = "A data de nascimento não pode estar vazia")
     @Column(name = "patient_birthday", nullable = true, unique = false)
     @Past(message = "A data de nascimento precisa ser no passado!")
     private Date dataNasc;
