@@ -1,0 +1,38 @@
+.root
+{
+    -fx-background-color: #FFFFFF;
+}
+
+.label-bold {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.label-bold2
+{
+    -fx-font-weight: 800;
+    -fx-text-fill: #222222;
+    -fx-font-size: 16px;
+}
+
+.label-bold3
+{
+    -fx-font-size: 30;
+    -fx-text-fill: #222222;
+    -fx-font-weight: 800;
+}
+
+.button-registrar
+{
+    -fx-border-radius: 10;
+    -fx-background-color: #0252FF;
+    -fx-text-fill: white;
+    -fx-font-weight: 400 ;
+}
+
+.font-sansSerif
+{
+    -fx-font-family: sans-serif;
+    -fx-font-weight: normal;
+}

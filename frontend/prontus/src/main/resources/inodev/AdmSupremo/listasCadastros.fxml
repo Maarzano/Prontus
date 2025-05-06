@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListasCadastrosController">
+    <children>
+        <AnchorPane stylesheets="@../styles/listasCadastros.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Rectangle fx:id="barraSuperior" arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="-8.0" layoutY="-9.0" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" width="1928.0">
+                    <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.18392929434776306" green="0.13955897092819214" blue="0.3815789520740509" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.006711409395973154">
+                                    <color>
+                                        <Color red="0.18392929434776306" green="0.13955897092819214" blue="0.3815789520740509" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                    <stroke>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </stroke>
+                </Rectangle>
+                <StackPane layoutX="23.0" layoutY="7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="43.0">
+                    <children>
+                        <ImageView fx:id="image" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../imagens/avatar-icon-2048x2048-ilrgk6vk.png" />
+                            </image>
+                        </ImageView>
+                        <Circle fill="TRANSPARENT" radius="24.0" stroke="WHITE" strokeType="INSIDE" styleClass="circulo1" />
+                    </children>
+                </StackPane>
+                <Pane layoutX="1699.0" layoutY="-6.0" prefHeight="54.0" prefWidth="221.0">
+                    <children>
+                        <ImageView fitHeight="54.0" fitWidth="43.0" layoutX="20.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@imagens/image-removebg-preview%20(3).png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="79.0" layoutY="14.0" styleClass="label-bold1" text="Prontus" />
+                    </children>
+                </Pane>
+                <Label layoutX="820.0" layoutY="112.0" prefHeight="54.0" prefWidth="280.0" styleClass="label-bold2" text="Lista de Cadastros" textFill="#5a39d2" />
+                <Button layoutX="465.0" layoutY="125.0" mnemonicParsing="false">
+                    <graphic>
+                        <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../imagens/271218.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Pane layoutX="350.0" layoutY="258.0" prefHeight="69.0" prefWidth="1248.0" styleClass="my-pane">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="115.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="313.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="570.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="1083.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="803.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Button layoutX="1120.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#visualizarCadastro" prefHeight="25.0" prefWidth="32.0" textFill="#c93636">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/65000.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="1170.0" layoutY="20.0" minWidth="32.0" mnemonicParsing="false" onAction="#editarCadastro" prefHeight="30.0" prefWidth="32.0">
+                            <graphic>
+                                <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/1828911.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <StackPane layoutX="42.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="43.0">
+                            <children>
+                                <ImageView fx:id="image1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/266033.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
+                            </children>
+                        </StackPane>
+                    </children>
+                </Pane>
+                <Pane layoutX="350.0" layoutY="358.0" prefHeight="69.0" prefWidth="1248.0" styleClass="my-pane">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="115.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="313.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="570.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="1083.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="803.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Button layoutX="1120.0" layoutY="22.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#visualizarCadastro" prefHeight="25.0" prefWidth="32.0" textFill="#c93636">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/65000.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="1170.0" layoutY="21.0" minWidth="32.0" mnemonicParsing="false" onAction="#editarCadastro" prefHeight="30.0" prefWidth="32.0">
+                            <graphic>
+                                <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/1828911.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <StackPane layoutX="42.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="43.0">
+                            <children>
+                                <ImageView fx:id="image11" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/266033.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
+                            </children>
+                        </StackPane>
+                    </children>
+                </Pane>
+                <Pane layoutX="350.0" layoutY="456.0" prefHeight="69.0" prefWidth="1248.0" styleClass="my-pane">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="115.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="313.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="570.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="1083.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="803.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Button layoutX="1120.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#visualizarCadastro" prefHeight="25.0" prefWidth="32.0" textFill="#c93636">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/65000.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="1170.0" layoutY="21.0" minWidth="32.0" mnemonicParsing="false" onAction="#editarCadastro" prefHeight="30.0" prefWidth="32.0">
+                            <graphic>
+                                <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/1828911.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <StackPane layoutX="42.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="43.0">
+                            <children>
+                                <ImageView fx:id="image111" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/266033.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
+                            </children>
+                        </StackPane>
+                    </children>
+                </Pane>
+                <Pane layoutX="350.0" layoutY="556.0" prefHeight="69.0" prefWidth="1248.0" styleClass="my-pane">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="115.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="313.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="570.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="1083.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="803.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Button layoutX="1120.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#visualizarCadastro" prefHeight="25.0" prefWidth="32.0" textFill="#c93636">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/65000.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="1170.0" layoutY="20.0" minWidth="32.0" mnemonicParsing="false" onAction="#editarCadastro" prefHeight="30.0" prefWidth="32.0">
+                            <graphic>
+                                <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/1828911.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <StackPane layoutX="42.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="43.0">
+                            <children>
+                                <ImageView fx:id="image112" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/266033.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
+                            </children>
+                        </StackPane>
+                    </children>
+                </Pane>
+                <Pane layoutX="350.0" layoutY="647.0" prefHeight="69.0" prefWidth="1248.0" styleClass="my-pane">
+                    <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="115.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="313.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="570.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="1083.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="803.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+                        <Button layoutX="1120.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#visualizarCadastro" prefHeight="25.0" prefWidth="32.0" textFill="#c93636">
+                            <graphic>
+                                <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/65000.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <Button layoutX="1170.0" layoutY="20.0" minWidth="32.0" mnemonicParsing="false" onAction="#editarCadastro" prefHeight="30.0" prefWidth="32.0">
+                            <graphic>
+                                <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/1828911.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <StackPane layoutX="42.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="43.0">
+                            <children>
+                                <ImageView fx:id="image113" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../imagens/266033.png" />
+                                    </image>
+                                </ImageView>
+                                <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
+                            </children>
+                        </StackPane>
+                    </children>
+                </Pane>
+                <Label layoutX="1255.0" layoutY="225.0" prefHeight="21.0" prefWidth="123.0" styleClass="label-bold3" text="Data Nascimento" />
+                <Label layoutX="536.0" layoutY="225.0" styleClass="label-bold3" text="Cargo" />
+                <Label layoutX="1041.0" layoutY="225.0" styleClass="label-bold3" text="CPF" />
+                <Label layoutX="788.0" layoutY="225.0" styleClass="label-bold3" text="Nome" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

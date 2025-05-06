@@ -17,9 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("loginTeste"), 640, 480);
-        scene.getStylesheets().add(App.class.getResource("/inodev/styles/styles.css").toExternalForm()); // Fixed path
-        stage.setTitle("Prontus - Login");
+        scene = new Scene(loadFXML("ListasCadastros"), 1920, 1005);
         stage.setScene(scene);
         stage.show();
     }
@@ -29,7 +27,7 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml")); // Fixed path
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
