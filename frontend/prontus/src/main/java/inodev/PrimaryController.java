@@ -1,0 +1,36 @@
+package inodev;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+
+public class PrimaryController {
+
+    @FXML private TextField usernameField;
+    @FXML private PasswordField passwordField;
+    @FXML private Label errorLabel;
+
+    @FXML
+    private Pane paneStroke;
+
+    @FXML
+    private AnchorPane login;
+
+    @FXML
+    private Button button;
+
+    @FXML
+    private void handleLogin() {
+        String user = usernameField.getText();
+        String pass = passwordField.getText();
+
+        if ("admin".equals(user) && "1234".equals(pass)) {
+            System.out.println("Login bem-sucedido!");
+            // Redirecionar para a próxima tela
+        } else {
+            errorLabel.setText("Usuário ou senha inválidos");
+            errorLabel.setVisible(true);
+        }
+    }
+}
