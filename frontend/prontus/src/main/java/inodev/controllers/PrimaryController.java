@@ -27,7 +27,6 @@ public class PrimaryController {
 
         if ("admin".equals(user) && "1234".equals(pass)) {
             System.out.println("Login bem-sucedido!");
-            // Redirecionar para a próxima tela
         } else {
             errorLabel.setText("Usuário ou senha inválidos");
             errorLabel.setVisible(true);
