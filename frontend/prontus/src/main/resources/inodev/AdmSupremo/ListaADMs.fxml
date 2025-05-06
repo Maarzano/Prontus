@@ -9,6 +9,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -44,7 +45,7 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="750.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Lista de Administradores">
+      <Text fill="WHITE" layoutX="790.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Lista de Usuários">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
@@ -56,12 +57,18 @@
       </Button>
 
       <!-- Content -->
-      <ScrollPane layoutX="100.0" layoutY="200.0" prefHeight="800.0" prefWidth="1700.0" style="-fx-background-color: transparent;">
+      <ScrollPane layoutX="362.0" layoutY="250.0" prefHeight="747.0" prefWidth="1243.0" style="-fx-background-color: transparent;">
          <content>
-            <VBox fx:id="vboxContainer" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 10; -fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-radius: 10; -fx-background-radius: 10;">
+            <VBox fx:id="vboxContainer" alignment="TOP_CENTER" prefHeight="22.0" prefWidth="1241.0" spacing="20.0" style="-fx-padding: 20; -fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-radius: 10; -fx-background-radius: 10;">
                <!-- Cards will be dynamically added here -->
             </VBox>
          </content>
       </ScrollPane>
+      <ImageView fitHeight="70.0" fitWidth="68.0" layoutX="80.0" layoutY="35.0">
+         <image>
+            <Image url="@../imagens/image-removebg-preview%20(3).png" />
+         </image>
+      </ImageView>
+      <Line endX="-96.0" endY="-44.0" layoutX="468.0" layoutY="64.0" startX="-96.0" startY="50.0" />
    </children>
 </Pane>

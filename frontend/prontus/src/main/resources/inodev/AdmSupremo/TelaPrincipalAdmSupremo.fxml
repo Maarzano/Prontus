@@ -44,17 +44,17 @@
          </font>
       </Text>
       <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
-      <Text fill="WHITE" layoutX="692.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="LISTAS DE CADASTROS">
+      <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="ADM-SUPREMO">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="220.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-background-color: #5a39d2;" text="Sair" textFill="WHITE" onAction="#handleLogout">
+      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-background-color: #5a39d2;" text="Sair" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="#5a39d2" layoutX="591.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA {NOME}  " wrappingWidth="826.681640625">
+      <Text fill="#5a39d2" layoutX="555.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA PRONTUS" wrappingWidth="826.681640625">
          <font>
             <Font size="48.0" />
          </font>
@@ -75,7 +75,7 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE" onAction="#handleCadastrarAdministrador">
+      <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleCadastrarAdministrador" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -85,7 +85,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="1203.0" layoutY="602.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2;" text="LISTAS" textFill="WHITE" onAction="#handleVerListaAdministradores">
+      <Button layoutX="1203.0" layoutY="602.0" mnemonicParsing="false" onAction="#handleVerListaAdministradores" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2;" text="LISTAS" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -93,6 +93,11 @@
       <ImageView fitHeight="70.0" fitWidth="82.0" layoutX="579.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@LISTA%20FOTO.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
+         <image>
+            <Image url="@../imagens/image-removebg-preview%20(3).png" />
          </image>
       </ImageView>
    </children>
