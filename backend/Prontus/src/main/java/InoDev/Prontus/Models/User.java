@@ -28,7 +28,7 @@ public class User {
     @Column(name = "user_id")
     private long id;
 
-    @Column(name = "user_cpf", unique = true, nullable = false, length = 14)
+    @Column(name = "user_cpf", unique = true, nullable = false, columnDefinition = "CHAR(11)")
     private String cpf;
 
     @Column(name = "user_name", nullable = false, unique = false)
@@ -44,7 +44,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private AdmRole role;
 
-    @Column(name = "user_cellphone", length = 15, nullable = true, unique = false) 
+    @Column(name = "user_cellphone", columnDefinition = "CHAR(11)", nullable = true, unique = false) 
     private String cellphone;
 
     @Column(name = "user_active", nullable = false, unique = false, columnDefinition = "BOOLEAN DEFAULT true")

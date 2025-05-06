@@ -25,7 +25,7 @@ public class Address {
     @Column(name="street", nullable = false, unique = false)
     private String street;
 
-    @Column(name="cep", nullable = false, length = 9, unique = false)
+    @Column(name="cep", nullable = false, columnDefinition = "CHAR(9)", unique = false)
     private String cep;
 
     @Column(name="number", nullable = false, unique = false)
