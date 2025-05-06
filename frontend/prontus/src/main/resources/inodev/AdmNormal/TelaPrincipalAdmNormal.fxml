@@ -14,7 +14,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane layoutY="-8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFF;">
@@ -73,12 +72,42 @@
                   <Image url="@../../Downloads/Design%20sem%20nome.png" />
                </image>
             </ImageView>
-            <Text layoutX="672.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para cadastrar um Médico">
+            <Text layoutX="581.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para cadastrar um Médico">
                <font>
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
             <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Rectangle fill="WHITE" height="102.0" layoutX="552.0" layoutY="577.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" width="832.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Rectangle>
+            <Text layoutX="581.0" layoutY="636.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para cadastrar uma recepcionista">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button layoutX="1205.0" layoutY="612.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Rectangle fill="WHITE" height="102.0" layoutX="552.0" layoutY="719.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" width="832.0">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Rectangle>
+            <Text layoutX="581.0" layoutY="778.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para ver a lista de médicos e recepcionistas">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Text>
+            <Button layoutX="1205.0" layoutY="754.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="Lista" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

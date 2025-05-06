@@ -60,7 +60,7 @@
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="449.0" layoutY="499.0" prefHeight="39.0" prefWidth="395.0">
+      <TextField layoutX="450.0" layoutY="488.0" prefHeight="39.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -85,11 +85,6 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="881.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Text>
       <Text layoutX="251.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
          <font>
             <Font size="36.0" />
@@ -100,16 +95,11 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="251.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+      <Text layoutX="251.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <TextField layoutX="1020.0" layoutY="494.0" prefHeight="44.0" prefWidth="465.0">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
       <Button layoutX="728.0" layoutY="859.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="212.0" style="-fx-background-color: #5A39D2;" text="CANCELAR" textFill="WHITE">
          <font>
             <Font size="26.0" />

@@ -17,7 +17,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("ListasCadastros"), 1920, 1005);
+        scene = new Scene(loadFXML("Login"), 1920, 1005);
         stage.setScene(scene);
         stage.show();
     }
@@ -26,8 +26,8 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+    public static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
