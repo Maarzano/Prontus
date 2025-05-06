@@ -51,28 +51,28 @@
             <Font size="64.0" />
          </font>
       </Text>
-      <Button layoutX="1440.0" layoutY="960.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="207.0" style="-fx-background-color: #5A39D2;" text="SALVAR">
+      <Button layoutX="1440.0" layoutY="960.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="207.0" style="-fx-background-color: #5A39D2;" text="SALVAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <TextArea layoutX="528.0" layoutY="340.0" prefHeight="189.0" prefWidth="1078.0" />
-      <Text layoutX="405.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receita:">
+      <TextArea layoutX="445.0" layoutY="320.0" prefHeight="189.0" prefWidth="1078.0" />
+      <Text layoutX="222.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receita:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <TextArea layoutX="523.0" layoutY="581.0" prefHeight="243.0" prefWidth="1078.0" />
-      <Text layoutX="348.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anotações:">
+      <TextArea layoutX="445.0" layoutY="561.0" prefHeight="243.0" prefWidth="1078.0" />
+      <Text layoutX="222.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anotações:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="1040.0" layoutY="889.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico:">
+      <Text layoutX="222.0" layoutY="889.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diagnóstico:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <TextField layoutX="1237.0" layoutY="856.0" prefHeight="40.0" prefWidth="364.0" />
+      <TextField layoutX="445.0" layoutY="856.0" prefHeight="40.0" prefWidth="364.0" />
    </children>
 </Pane>
