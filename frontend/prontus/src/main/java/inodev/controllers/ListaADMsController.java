@@ -11,6 +11,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -55,7 +57,8 @@ public class ListaADMsController {
                         adm.get("cpf").getAsString(),
                         adm.get("cellphone").getAsString(),
                         adm.get("active").getAsBoolean(),
-                        adm.get("createdAt").getAsString()
+                        adm.get("createdAt").getAsString(),
+                        adm.get("role").getAsString()
                     );
                 }
             } else {
@@ -66,7 +69,7 @@ public class ListaADMsController {
         }
     }
 
-    private void adicionarCardADM(String nome, String email, String cpf, String celular, boolean ativo, String dataCriacao) {
+    private void adicionarCardADM(String nome, String email, String cpf, String celular, boolean ativo, String dataCriacao, String role) {
         HBox card = new HBox();
         card.setSpacing(20);
         card.setStyle("-fx-padding: 15; -fx-border-color: #5A39D2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #F3F3F3;");
@@ -89,10 +92,15 @@ public class ListaADMsController {
         Text ativoText = new Text("Ativo: " + (ativo ? "Sim" : "Não"));
         ativoText.setStyle("-fx-font-size: 14;");
 
-        Text dataCriacaoText = new Text("Criado em: " + dataCriacao);
+        Text roleText = new Text("Perfil: " + role);
+        roleText.setStyle("-fx-font-size: 14;");
+
+        LocalDateTime dateTime = LocalDateTime.parse(dataCriacao);
+        String formattedDate = dateTime.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+        Text dataCriacaoText = new Text("Criado em: " + formattedDate);
         dataCriacaoText.setStyle("-fx-font-size: 14;");
 
-        details.getChildren().addAll(nomeText, emailText, cpfText, celularText, ativoText, dataCriacaoText);
+        details.getChildren().addAll(nomeText, emailText, cpfText, celularText, ativoText, roleText, dataCriacaoText);
 
         card.getChildren().add(details);
         vboxContainer.getChildren().add(card);
