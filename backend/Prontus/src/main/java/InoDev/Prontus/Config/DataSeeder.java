@@ -51,8 +51,8 @@ public class DataSeeder implements CommandLineRunner {
 
     private void seedUsers() {
         if (userRepository.count() == 0) {
-            User admin = new User(0, "123.456.789-00", "Admin User", "admin@example.com", "password123", AdmRole.ADM_SUPER, "99999-9999", true, LocalDateTime.now());
-            User doctor = new User(0, "987.654.321-00", "Doctor User", "doctor@example.com", "password123", AdmRole.DOCTOR, "88888-8888", true, LocalDateTime.now());
+            User admin = new User(0, "12345678900", "Admin User", "admin@example.com", "password123", AdmRole.ADM_SUPER, "31999999999", true, LocalDateTime.now());
+            User doctor = new User(0, "98765432100", "Doctor User", "doctor@example.com", "password123", AdmRole.DOCTOR, "31888888888", true, LocalDateTime.now());
             userRepository.saveAll(List.of(admin, doctor));
         }
     }
@@ -67,8 +67,8 @@ public class DataSeeder implements CommandLineRunner {
 
     private void seedAddresses() {
         if (addressRepository.count() == 0) {
-            Address address1 = new Address(0, "Rua A", "12345-678", "100", "Bairro A", "Cidade A", "SP");
-            Address address2 = new Address(0, "Rua B", "87654-321", "200", "Bairro B", "Cidade B", "RJ");
+            Address address1 = new Address(0, "Rua A", "12345678", "100", "Bairro A", "Cidade A", "SP");
+            Address address2 = new Address(0, "Rua B", "87654321", "200", "Bairro B", "Cidade B", "RJ");
             addressRepository.saveAll(List.of(address1, address2));
         }
     }
@@ -76,8 +76,8 @@ public class DataSeeder implements CommandLineRunner {
     private void seedPatients() {
         if (patientRepository.count() == 0) {
             Address address = addressRepository.findAll().get(0);
-            Patient patient1 = new Patient(0, "John Doe", "111.222.333-44", Date.valueOf(LocalDate.of(1990, 1, 1)), "99999-9999", "john.doe@example.com", address);
-            Patient patient2 = new Patient(0, "Jane Doe", "555.666.777-88", Date.valueOf(LocalDate.of(1985, 5, 15)), "88888-8888", "jane.doe@example.com", address);
+            Patient patient1 = new Patient(0, "John Doe", "11122233344", Date.valueOf(LocalDate.of(1990, 1, 1)), "31999999999", "john.doe@example.com", address);
+            Patient patient2 = new Patient(0, "Jane Doe", "55566677788", Date.valueOf(LocalDate.of(1985, 5, 15)), "31888888888", "jane.doe@example.com", address);
             patientRepository.saveAll(List.of(patient1, patient2));
         }
     }

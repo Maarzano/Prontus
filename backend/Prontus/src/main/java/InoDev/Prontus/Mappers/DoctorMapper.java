@@ -3,15 +3,17 @@ package InoDev.Prontus.Mappers;
 import InoDev.Prontus.DTO.Doctor.*;
 import InoDev.Prontus.Models.Doctor;
 import InoDev.Prontus.Models.Specialty;
+import InoDev.Prontus.Models.User;
 import InoDev.Prontus.Models.Address;
 
 public class DoctorMapper {
 
-    public static Doctor toModel(CreateDoctorDTO dto, Specialty specialty, Address address) {
+    public static Doctor toModel(CreateDoctorDTO dto, Specialty specialty, Address address, User user) {
         Doctor doctor = new Doctor();
         doctor.setCrm(dto.getCrm());
         doctor.setSpecialty(specialty);
         doctor.setAddress(address);
+        doctor.setUser(user);
         return doctor;
     }
 

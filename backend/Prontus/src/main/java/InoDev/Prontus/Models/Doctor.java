@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,7 @@ public class Doctor {
     @Column(name = "doctor_id")
     private long id;
 
+    @NotBlank(message = "O crm não pode estar vazio")
     @Column(name = "doctor_crm", nullable = false, unique = true, length = 20)
     private String crm;
 

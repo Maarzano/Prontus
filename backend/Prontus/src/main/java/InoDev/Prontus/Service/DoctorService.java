@@ -13,9 +13,11 @@ import InoDev.Prontus.Mappers.DoctorMapper;
 import InoDev.Prontus.Models.Address;
 import InoDev.Prontus.Models.Doctor;
 import InoDev.Prontus.Models.Specialty;
+import InoDev.Prontus.Models.User;
 import InoDev.Prontus.Repository.AddressRepository;
 import InoDev.Prontus.Repository.DoctorRepository;
 import InoDev.Prontus.Repository.SpecialtyRepository;
+import InoDev.Prontus.Repository.UserRepository;
 
 @Service
 public class DoctorService {
@@ -23,8 +25,10 @@ public class DoctorService {
     private final DoctorRepository doctorRepository;
     private final SpecialtyRepository specialtyRepository;
     private final AddressRepository addressRepository;
+    private final UserRepository userRepository;
 
-    public DoctorService(DoctorRepository doctorRepository, SpecialtyRepository specialtyRepository, AddressRepository addressRepository) {
+    public DoctorService(DoctorRepository doctorRepository, SpecialtyRepository specialtyRepository, AddressRepository addressRepository, UserRepository userRepository) {
+        this.userRepository = userRepository;
         this.doctorRepository = doctorRepository;
         this.specialtyRepository = specialtyRepository;
         this.addressRepository = addressRepository;
@@ -36,8 +40,10 @@ public class DoctorService {
                 .orElseThrow(() -> new ResourceNotFoundException("Specialty not found with id: " + dto.getSpecialtyId()));
         Address address = addressRepository.findById(dto.getAddressId())
                 .orElseThrow(() -> new ResourceNotFoundException("Address not found with id: " + dto.getAddressId()));
+        User user = userRepository.findById(dto.getUserId())
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with id: " + dto.getUserId()));
 
-        Doctor doctor = DoctorMapper.toModel(dto, specialty, address);
+        Doctor doctor = DoctorMapper.toModel(dto, specialty, address, user);
         doctor = doctorRepository.save(doctor);
         return DoctorMapper.toDTO(doctor);
     }
