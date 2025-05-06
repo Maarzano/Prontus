@@ -5,15 +5,17 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import InoDev.Prontus.DTO.Doctor.*;
+import InoDev.Prontus.DTO.Doctor.CreateDoctorDTO;
+import InoDev.Prontus.DTO.Doctor.DoctorDTO;
+import InoDev.Prontus.DTO.Doctor.UpdateDoctorDTO;
 import InoDev.Prontus.Exceptions.ResourceNotFoundException;
 import InoDev.Prontus.Mappers.DoctorMapper;
+import InoDev.Prontus.Models.Address;
 import InoDev.Prontus.Models.Doctor;
 import InoDev.Prontus.Models.Specialty;
-import InoDev.Prontus.Models.Address;
+import InoDev.Prontus.Repository.AddressRepository;
 import InoDev.Prontus.Repository.DoctorRepository;
 import InoDev.Prontus.Repository.SpecialtyRepository;
-import InoDev.Prontus.Repository.AddressRepository;
 
 @Service
 public class DoctorService {

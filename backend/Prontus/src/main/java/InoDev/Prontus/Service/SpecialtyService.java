@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import InoDev.Prontus.DTO.Specialty.*;
+import InoDev.Prontus.DTO.Specialty.CreateSpecialtyDTO;
+import InoDev.Prontus.DTO.Specialty.SpecialtyDTO;
+import InoDev.Prontus.DTO.Specialty.UpdateSpecialtyDTO;
 import InoDev.Prontus.Exceptions.ResourceNotFoundException;
 import InoDev.Prontus.Mappers.SpecialtyMapper;
 import InoDev.Prontus.Models.Specialty;
