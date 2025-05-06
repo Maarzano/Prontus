@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 
 @Component
@@ -113,7 +114,7 @@ public class DataSeeder implements CommandLineRunner {
     private void seedAvailableTimes() {
         if (availableTimeRepository.count() == 0) {
             Doctor doctor = doctorRepository.findAll().get(0);
-            AvailableTime availableTime = new AvailableTime(0, doctor, WeekDay.SEGUNDA, java.sql.Time.valueOf("08:00:00"), java.sql.Time.valueOf("12:00:00"));
+            AvailableTime availableTime = new AvailableTime(0, doctor, WeekDay.SEGUNDA, LocalTime.parse("08:00:00"), LocalTime.parse("12:00:00"));
             availableTimeRepository.save(availableTime);
         }
     }

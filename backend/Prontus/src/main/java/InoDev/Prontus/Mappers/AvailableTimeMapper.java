@@ -10,8 +10,8 @@ public class AvailableTimeMapper {
         AvailableTime availableTime = new AvailableTime();
         availableTime.setDoctor(doctor);
         availableTime.setDaysweek(dto.getDaysweek());
-        availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
-        availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+        availableTime.setStarttime(dto.getStartTime());
+        availableTime.setEndtime(dto.getEndTime());
         return availableTime;
     }
 
@@ -26,11 +26,11 @@ public class AvailableTimeMapper {
         }
     
         if (dto.getStartTime() != null) {
-            availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
+            availableTime.setStarttime(dto.getStartTime());
         }
     
         if (dto.getEndTime() != null) {
-            availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+            availableTime.setEndtime(dto.getEndTime());
         }
     
         return availableTime;
@@ -42,8 +42,8 @@ public class AvailableTimeMapper {
             availableTime.getId(),
             availableTime.getDoctor().getId(),
             availableTime.getDaysweek(),
-            availableTime.getStarttime().toLocalTime(),
-            availableTime.getEndtime().toLocalTime()
+            availableTime.getStarttime(),
+            availableTime.getEndtime()
         );
     }
 }

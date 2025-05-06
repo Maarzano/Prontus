@@ -1,6 +1,8 @@
 package InoDev.Prontus.Models;
 
 import java.sql.Time;
+import java.time.LocalTime;
+import java.time.LocalTime;
 
 import InoDev.Prontus.Utils.Enums.WeekDay;
 import jakarta.persistence.Column;
@@ -38,8 +40,8 @@ public class AvailableTime {
     private WeekDay daysweek;
     
     @Column(name = "start_time", nullable = false, unique = false)
-    private Time starttime;
+    private LocalTime starttime;
 
     @Column(name = "end_time", nullable = false, unique = false)
-    private Time endtime;
+    private LocalTime endtime;
 }
