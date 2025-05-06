@@ -85,7 +85,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="1203.0" layoutY="602.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2;" text="LISTAS" textFill="WHITE">
+      <Button layoutX="1203.0" layoutY="602.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2;" text="LISTAS" textFill="WHITE" onAction="#handleVerListaAdministradores">
          <font>
             <Font size="18.0" />
          </font>
