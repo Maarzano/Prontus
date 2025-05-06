@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" stylesheets="@primary.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" stylesheets="@../styles/primary.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.PrimaryController">
    <children>
 
       <!-- Painel Centralizado -->
@@ -20,15 +20,15 @@
                <children>
                   <ImageView fitHeight="56.0" fitWidth="56.0" layoutX="139.0" layoutY="94.0" preserveRatio="true">
                      <image>
-                        <Image url="@imagens/image-removebg-preview.png" />
+                        <Image url="@../imagens/image-removebg-preview.png" />
                      </image>
                   </ImageView>
                   <PasswordField fx:id="passwordField2" layoutX="42.0" layoutY="394.0" prefHeight="41.0" prefWidth="250.0" style="-fx-background-radius: 10;" />
-                  <Label layoutX="52.0" layoutY="379.0" styleClass="font-sansSerif" stylesheets="@primary.css" text="Confirme a senha" />
+                  <Label layoutX="52.0" layoutY="379.0" styleClass="font-sansSerif" stylesheets="@../styles/primary.css" text="Confirme a senha" />
 
-                  <Label layoutX="52.0" layoutY="172.0" style="-fx-font-family: sans-serif;" styleClass="font-sansSerif" stylesheets="@primary.css" text="Nome Completo" />
-                  <Label layoutX="52.0" layoutY="240.0" styleClass="font-sansSerif" stylesheets="@primary.css" text="Email" />
-                  <Label layoutX="52.0" layoutY="306.0" styleClass="font-sansSerif" stylesheets="@primary.css" text="Senha" />
+                  <Label layoutX="52.0" layoutY="172.0" style="-fx-font-family: sans-serif;" styleClass="font-sansSerif" stylesheets="@../styles/primary.css" text="Nome Completo" />
+                  <Label layoutX="52.0" layoutY="240.0" styleClass="font-sansSerif" stylesheets="@../styles/primary.css" text="Email" />
+                  <Label layoutX="52.0" layoutY="306.0" styleClass="font-sansSerif" stylesheets="@../styles/primary.css" text="Senha" />
 
                   <Button fx:id="button" layoutX="127.0" layoutY="453.0" onAction="#handleLogin" prefHeight="32.0" prefWidth="95.0" styleClass="button-registrar" text="Registrar" />
 

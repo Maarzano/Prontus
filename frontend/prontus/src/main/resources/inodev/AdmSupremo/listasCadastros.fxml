@@ -13,9 +13,9 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.ListasCadastrosController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListasCadastrosController">
     <children>
-        <AnchorPane stylesheets="@listasCadastros.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane stylesheets="@../styles/listasCadastros.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <Rectangle fx:id="barraSuperior" arcHeight="5.0" arcWidth="5.0" height="69.0" layoutX="-8.0" layoutY="-9.0" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" width="1928.0">
                     <fill>
@@ -60,7 +60,7 @@
                     <children>
                         <ImageView fx:id="image" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@imagens/avatar-icon-2048x2048-ilrgk6vk.png" />
+                                <Image url="@../imagens/avatar-icon-2048x2048-ilrgk6vk.png" />
                             </image>
                         </ImageView>
                         <Circle fill="TRANSPARENT" radius="24.0" stroke="WHITE" strokeType="INSIDE" styleClass="circulo1" />
@@ -81,7 +81,7 @@
                     <graphic>
                         <ImageView fitHeight="19.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@imagens/271218.png" />
+                                <Image url="@../imagens/271218.png" />
                             </image>
                         </ImageView>
                     </graphic>
@@ -97,7 +97,7 @@
                             <graphic>
                                 <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/65000.png" />
+                                        <Image url="@../imagens/65000.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -106,7 +106,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/1828911.png" />
+                                        <Image url="@../imagens/1828911.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -115,7 +115,7 @@
                             <children>
                                 <ImageView fx:id="image1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/266033.png" />
+                                        <Image url="@../imagens/266033.png" />
                                     </image>
                                 </ImageView>
                                 <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
@@ -134,7 +134,7 @@
                             <graphic>
                                 <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/65000.png" />
+                                        <Image url="@../imagens/65000.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -143,7 +143,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/1828911.png" />
+                                        <Image url="@../imagens/1828911.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -152,7 +152,7 @@
                             <children>
                                 <ImageView fx:id="image11" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/266033.png" />
+                                        <Image url="@../imagens/266033.png" />
                                     </image>
                                 </ImageView>
                                 <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
@@ -171,7 +171,7 @@
                             <graphic>
                                 <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/65000.png" />
+                                        <Image url="@../imagens/65000.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -180,7 +180,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/1828911.png" />
+                                        <Image url="@../imagens/1828911.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -189,7 +189,7 @@
                             <children>
                                 <ImageView fx:id="image111" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/266033.png" />
+                                        <Image url="@../imagens/266033.png" />
                                     </image>
                                 </ImageView>
                                 <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
@@ -208,7 +208,7 @@
                             <graphic>
                                 <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/65000.png" />
+                                        <Image url="@../imagens/65000.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -217,7 +217,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/1828911.png" />
+                                        <Image url="@../imagens/1828911.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -226,7 +226,7 @@
                             <children>
                                 <ImageView fx:id="image112" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/266033.png" />
+                                        <Image url="@../imagens/266033.png" />
                                     </image>
                                 </ImageView>
                                 <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
@@ -245,7 +245,7 @@
                             <graphic>
                                 <ImageView fitHeight="70.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/65000.png" />
+                                        <Image url="@../imagens/65000.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -254,7 +254,7 @@
                             <graphic>
                                 <ImageView fitHeight="23.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/1828911.png" />
+                                        <Image url="@../imagens/1828911.png" />
                                     </image>
                                 </ImageView>
                             </graphic>
@@ -263,7 +263,7 @@
                             <children>
                                 <ImageView fx:id="image113" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
-                                        <Image url="@imagens/266033.png" />
+                                        <Image url="@../imagens/266033.png" />
                                     </image>
                                 </ImageView>
                                 <Circle fill="TRANSPARENT" radius="24.0" stroke="BLACK" strokeType="INSIDE" styleClass="circulo1" />
