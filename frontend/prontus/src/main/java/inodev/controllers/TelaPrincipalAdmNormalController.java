@@ -12,4 +12,19 @@ public class TelaPrincipalAdmNormalController {
     public void handleLogout(ActionEvent event) throws IOException {
         App.setRoot("login");
     }
+
+    @FXML
+    public void handleCadastrarMedico(ActionEvent event) throws IOException {
+        App.setRoot("AdmNormal/CadastrarMedico");
+    }
+
+    @FXML
+    public void handleCadastrarRecepcionista(ActionEvent event) throws IOException {
+        App.setRoot("AdmNormal/CadastrarRecepcionista");
+    }
+
+    @FXML
+    public void handleVerListaMedicosRecepcionistas(ActionEvent event) throws IOException {
+        App.setRoot("AdmSupremo/listasCadastros");
+    }
 }

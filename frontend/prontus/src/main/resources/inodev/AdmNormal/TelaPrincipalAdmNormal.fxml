@@ -77,7 +77,7 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE">
+            <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE" onAction="#handleCadastrarMedico">
                <font>
                   <Font size="18.0" />
                </font>
@@ -92,7 +92,7 @@
                   <Font name="System Bold" size="23.0" />
                </font>
             </Text>
-            <Button layoutX="1205.0" layoutY="612.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE">
+            <Button layoutX="1205.0" layoutY="612.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CADASTRAR" textFill="WHITE" onAction="#handleCadastrarRecepcionista">
                <font>
                   <Font size="18.0" />
                </font>

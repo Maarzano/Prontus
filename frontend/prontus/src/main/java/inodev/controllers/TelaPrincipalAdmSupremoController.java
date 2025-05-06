@@ -12,4 +12,14 @@ public class TelaPrincipalAdmSupremoController {
     public void handleLogout(ActionEvent event) throws IOException {
         App.setRoot("login");
     }
+
+    @FXML
+    public void handleCadastrarAdministrador(ActionEvent event) throws IOException {
+        App.setRoot("AdmSupremo/CadastrarAdmNormal");
+    }
+
+    @FXML
+    public void handleVerListaAdministradores(ActionEvent event) throws IOException {
+        App.setRoot("AdmSupremo/listasCadastros");
+    }
 }
