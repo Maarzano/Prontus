@@ -78,27 +78,21 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Text layoutX="310.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+            <Text layoutX="1044.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
-            <Text layoutX="315.0" layoutY="709.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Text>
-            <Text layoutX="1011.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+            <Text layoutX="313.0" layoutY="651.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
                <font>
                   <Font size="36.0" />
                </font>
             </Text>
             <TextArea layoutX="589.0" layoutY="408.0" prefHeight="48.0" prefWidth="1044.0" />
             <TextArea layoutX="466.0" layoutY="477.0" prefHeight="48.0" prefWidth="546.0" />
-            <TextArea layoutX="473.0" layoutY="619.0" prefHeight="48.0" prefWidth="522.0" />
-            <TextArea layoutX="1139.0" layoutY="626.0" prefHeight="48.0" prefWidth="492.0" />
-            <TextArea layoutX="473.0" layoutY="688.0" prefHeight="48.0" prefWidth="1162.0" />
-            <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="VOLTAR" textFill="WHITE" onAction="#handleVoltar">
+            <TextArea layoutX="466.0" layoutY="612.0" prefHeight="48.0" prefWidth="492.0" />
+            <TextArea layoutX="1137.0" layoutY="551.0" prefHeight="48.0" prefWidth="370.0" />
+            <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="VOLTAR" textFill="WHITE">
                <font>
                   <Font size="26.0" />
                </font>
