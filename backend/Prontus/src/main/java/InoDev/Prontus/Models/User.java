@@ -12,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,15 +29,19 @@ public class User {
     @Column(name = "user_id")
     private long id;
 
-    @Column(name = "user_cpf", unique = true, nullable = false, columnDefinition = "CHAR(11)")
+    @NotBlank(message = "O CPF não pode estar vazio")
+    @Column(name = "user_cpf", unique = true, columnDefinition = "CHAR(11)")
     private String cpf;
 
+    @NotBlank(message = "O nome não pode estar vazio")
     @Column(name = "user_name", nullable = false, unique = false)
     private String name;
 
+    @NotBlank(message = "O e-mail não pode estar vazio")
     @Column(name = "user_email", length = 100, nullable = false, unique = true)
     private String email;
 
+    @NotBlank(message = "A senha não pode estar vazia")
     @Column(name = "user_password", nullable = false, unique = false)
     private String password;
 

@@ -10,6 +10,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -40,6 +41,7 @@ public class MedicalRecord {
     @Enumerated(EnumType.STRING)
     private Diagnostics diagnostic;
 
+    @NotBlank(message = "A receita não pode estar vazia")
     @Column(name = "recepies", nullable = true)
     private String recepie;
 
