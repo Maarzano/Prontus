@@ -31,6 +31,25 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
+    public static void redirectToRoleScreen(String role) throws IOException {
+        switch (role) {
+            case "ADM_SUPER":
+                setRoot("AdmSupremo/TelaPrincipalAdmSupremo");
+                break;
+            case "ADM":
+                setRoot("AdmNormal/TelaPrincipalAdmNormal");
+                break;
+            case "RECEPCIONIST":
+                setRoot("Recepcionista/TelaPrincipalRecepcionista");
+                break;
+            case "DOCTOR":
+                setRoot("Médico/TelaPrincipalMedico");
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown role: " + role);
+        }
+    }
+
     public static void main(String[] args) {
         launch();
     }

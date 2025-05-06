@@ -1,7 +1,5 @@
 package InoDev.Prontus.Models;
 
-import java.sql.Time;
-import java.time.LocalTime;
 import java.time.LocalTime;
 
 import InoDev.Prontus.Utils.Enums.WeekDay;

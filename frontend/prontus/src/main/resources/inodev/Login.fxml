@@ -26,9 +26,9 @@
                   <Label layoutX="52.0" layoutY="208.0" styleClass="font-sansSerif" stylesheets="styles/primary.css" text="Email" />
                   <Label layoutX="52.0" layoutY="287.0" styleClass="font-sansSerif" stylesheets="styles/primary.css" text="Senha" />
 
-                  <Button fx:id="button" layoutX="127.0" layoutY="453.0" onAction="#handleLogin" prefHeight="32.0" prefWidth="95.0" styleClass="button-registrar" text="Login" />
-                  <TextField fx:id="usernameField2" layoutX="42.0" layoutY="223.0" prefHeight="41.0" prefWidth="250.0" style="-fx-background-radius: 10;" />
-                  <PasswordField fx:id="passwordField1" layoutX="42.0" layoutY="302.0" prefHeight="41.0" prefWidth="250.0" style="-fx-background-radius: 10;" />
+                  <Button layoutX="127.0" layoutY="453.0" onAction="#handleLogin" prefHeight="32.0" prefWidth="95.0" styleClass="button-registrar" text="Login" />
+                  <TextField fx:id="emailField" layoutX="42.0" layoutY="223.0" prefHeight="41.0" prefWidth="250.0" style="-fx-background-radius: 10;" />
+                  <PasswordField fx:id="passwordField" layoutX="42.0" layoutY="302.0" prefHeight="41.0" prefWidth="250.0" style="-fx-background-radius: 10;" />
 
                   <Label layoutX="100.0" layoutY="30.0" styleClass="label-bold" text="Bem vindo ao Prontus!" />
                   <Label layoutX="66.0" layoutY="54.0" styleClass="label-bold2" text="Cadastre um Administrador" />

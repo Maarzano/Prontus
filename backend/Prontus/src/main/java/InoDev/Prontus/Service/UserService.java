@@ -55,4 +55,15 @@ public class UserService {
         }
         userRepository.deleteById(id);
     }
+
+    public UserDTO authenticate(String email, String password) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with email: " + email));
+
+        if (!user.getPassword().equals(password)) {
+            throw new IllegalArgumentException("Invalid password");
+        }
+
+        return UserMapper.toDTO(user);
+    }
 }
