@@ -49,7 +49,14 @@ public class ListaADMsController {
                 JsonArray adms = JsonParser.parseString(response.toString()).getAsJsonArray();
                 for (JsonElement element : adms) {
                     JsonObject adm = element.getAsJsonObject();
-                    adicionarCardADM(adm.get("name").getAsString(), adm.get("email").getAsString(), adm.get("cpf").getAsString());
+                    adicionarCardADM(
+                        adm.get("name").getAsString(),
+                        adm.get("email").getAsString(),
+                        adm.get("cpf").getAsString(),
+                        adm.get("cellphone").getAsString(),
+                        adm.get("active").getAsBoolean(),
+                        adm.get("createdAt").getAsString()
+                    );
                 }
             } else {
                 System.out.println("Erro ao buscar ADMs: " + conn.getResponseCode());
@@ -59,10 +66,13 @@ public class ListaADMsController {
         }
     }
 
-    private void adicionarCardADM(String nome, String email, String cpf) {
+    private void adicionarCardADM(String nome, String email, String cpf, String celular, boolean ativo, String dataCriacao) {
         HBox card = new HBox();
         card.setSpacing(20);
-        card.setStyle("-fx-padding: 10; -fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5; -fx-background-color: #f3f3f3;");
+        card.setStyle("-fx-padding: 15; -fx-border-color: #5A39D2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #F3F3F3;");
+
+        VBox details = new VBox();
+        details.setSpacing(5);
 
         Text nomeText = new Text("Nome: " + nome);
         nomeText.setStyle("-fx-font-size: 16; -fx-font-weight: bold;");
@@ -73,7 +83,18 @@ public class ListaADMsController {
         Text cpfText = new Text("CPF: " + cpf);
         cpfText.setStyle("-fx-font-size: 14;");
 
-        card.getChildren().addAll(nomeText, emailText, cpfText);
+        Text celularText = new Text("Celular: " + celular);
+        celularText.setStyle("-fx-font-size: 14;");
+
+        Text ativoText = new Text("Ativo: " + (ativo ? "Sim" : "Não"));
+        ativoText.setStyle("-fx-font-size: 14;");
+
+        Text dataCriacaoText = new Text("Criado em: " + dataCriacao);
+        dataCriacaoText.setStyle("-fx-font-size: 14;");
+
+        details.getChildren().addAll(nomeText, emailText, cpfText, celularText, ativoText, dataCriacaoText);
+
+        card.getChildren().add(details);
         vboxContainer.getChildren().add(card);
     }
 
