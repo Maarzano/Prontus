@@ -21,16 +21,25 @@ public class SchedulingMapper {
     }
 
     public static Scheduling toModel(UpdateSchedulingDTO dto, Scheduling scheduling, Patient patient, Doctor doctor) {
-        if (scheduling == null || patient == null || doctor == null) {
-            throw new IllegalArgumentException("Scheduling, Patient, and Doctor cannot be null");
+        if (scheduling == null) {
+            throw new IllegalArgumentException("Scheduling cannot be null");
         }
-
-        scheduling.setPatient(patient);
-        scheduling.setDoctor(doctor);
-        scheduling.setDateTime(dto.getDateTime());
-        scheduling.setStatusScheduling(dto.getStatusScheduling());
+        if (patient != null) {
+            scheduling.setPatient(patient);
+        }
+        if (doctor != null) {
+            scheduling.setDoctor(doctor);
+        }
+        if (dto.getDateTime() != null) {
+            scheduling.setDateTime(dto.getDateTime());
+        }
+        if (dto.getStatusScheduling() != null) {
+            scheduling.setStatusScheduling(dto.getStatusScheduling());
+        }
+    
         return scheduling;
     }
+    
 
     public static SchedulingResponseDTO toDTO(Scheduling scheduling) {
         if (scheduling == null) {

@@ -10,26 +10,40 @@ public class AvailableTimeMapper {
         AvailableTime availableTime = new AvailableTime();
         availableTime.setDoctor(doctor);
         availableTime.setDaysweek(dto.getDaysweek());
-        availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
-        availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+        availableTime.setStarttime(dto.getStartTime());
+        availableTime.setEndtime(dto.getEndTime());
         return availableTime;
     }
 
     public static AvailableTime toModel(UpdateAvailableTimeDTO dto, AvailableTime availableTime, Doctor doctor) {
+        if (availableTime == null || doctor == null) {
+            throw new IllegalArgumentException("AvailableTime and Doctor cannot be null");
+        }
         availableTime.setDoctor(doctor);
-        availableTime.setDaysweek(dto.getDaysweek());
-        availableTime.setStarttime(java.sql.Time.valueOf(dto.getStartTime()));
-        availableTime.setEndtime(java.sql.Time.valueOf(dto.getEndTime()));
+    
+        if (dto.getDaysweek() != null) {
+            availableTime.setDaysweek(dto.getDaysweek());
+        }
+    
+        if (dto.getStartTime() != null) {
+            availableTime.setStarttime(dto.getStartTime());
+        }
+    
+        if (dto.getEndTime() != null) {
+            availableTime.setEndtime(dto.getEndTime());
+        }
+    
         return availableTime;
     }
+    
 
     public static AvailableTimeDTO toDTO(AvailableTime availableTime) {
         return new AvailableTimeDTO(
             availableTime.getId(),
             availableTime.getDoctor().getId(),
             availableTime.getDaysweek(),
-            availableTime.getStarttime().toLocalTime(),
-            availableTime.getEndtime().toLocalTime()
+            availableTime.getStarttime(),
+            availableTime.getEndtime()
         );
     }
 }

@@ -12,7 +12,9 @@ public class SpecialtyMapper {
     }
 
     public static Specialty toModel(UpdateSpecialtyDTO dto, Specialty specialty) {
-        specialty.setSpecialty(dto.getSpecialty());
+        if (dto.getSpecialty() != null) {
+            specialty.setSpecialty(dto.getSpecialty());
+        }
         return specialty;
     }
 
