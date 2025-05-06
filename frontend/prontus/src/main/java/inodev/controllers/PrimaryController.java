@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import java.io.IOException;
 
 public class PrimaryController {
 
@@ -31,5 +32,10 @@ public class PrimaryController {
             errorLabel.setText("Usuário ou senha inválidos");
             errorLabel.setVisible(true);
         }
+    }
+
+    @FXML
+    private void handleVoltar() throws IOException {
+        inodev.App.setRoot("AdmSupremo/TelaPrincipalAdmSupremo");
     }
 }

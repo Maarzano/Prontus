@@ -22,4 +22,9 @@ public class TelaPrincipalAdmSupremoController {
     public void handleVerListaAdministradores(ActionEvent event) throws IOException {
         App.setRoot("AdmSupremo/listasCadastros");
     }
+
+    @FXML
+    private void handleVoltar() throws IOException {
+        App.setRoot("AdmSupremo/TelaPrincipalAdmSupremo");
+    }
 }

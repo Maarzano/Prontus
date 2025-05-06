@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarAdmNormalController">
    <children>
       <Pane layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFFF;">
          <children>
@@ -98,7 +98,7 @@
             <TextArea layoutX="473.0" layoutY="619.0" prefHeight="48.0" prefWidth="522.0" />
             <TextArea layoutX="1139.0" layoutY="626.0" prefHeight="48.0" prefWidth="492.0" />
             <TextArea layoutX="473.0" layoutY="688.0" prefHeight="48.0" prefWidth="1162.0" />
-            <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="VOLTAR" textFill="WHITE">
+            <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="VOLTAR" textFill="WHITE" onAction="#handleVoltar">
                <font>
                   <Font size="26.0" />
                </font>
