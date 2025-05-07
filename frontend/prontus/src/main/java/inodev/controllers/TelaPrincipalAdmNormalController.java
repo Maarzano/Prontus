@@ -25,6 +25,6 @@ public class TelaPrincipalAdmNormalController {
 
     @FXML
     public void handleVerListaMedicosRecepcionistas(ActionEvent event) throws IOException {
-        App.setRoot("AdmSupremo/listasCadastros");
+        App.setRoot("AdmNormal/ListaMedicosRecepcionistas");
     }
 }
