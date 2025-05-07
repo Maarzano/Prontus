@@ -51,9 +51,11 @@ public class ListaConsultasController {
 
                     JsonObject patient = fetchPatient(patientId);
                     JsonObject doctor = fetchDoctor(doctorId);
+                    JsonObject user = fetchUser(doctor.get("userId").getAsInt());
 
                     adicionarCardConsulta(
                         patient.get("name").getAsString(),
+                        user.get("name").getAsString(),
                         doctor.get("crm").getAsString(),
                         dateTime,
                         status
@@ -97,7 +99,22 @@ public class ListaConsultasController {
         }
     }
 
-    private void adicionarCardConsulta(String patientName, String doctorCrm, String dateTime, String status) {
+    private JsonObject fetchUser(int userId) throws Exception {
+        URL url = new URL("http://localhost:8080/api/users/" + userId);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+
+        if (conn.getResponseCode() == 200) {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            String response = reader.readLine();
+            reader.close();
+            return JsonParser.parseString(response).getAsJsonObject();
+        } else {
+            throw new Exception("Erro ao buscar usuário com ID: " + userId);
+        }
+    }
+
+    private void adicionarCardConsulta(String patientName, String doctorName, String doctorCrm, String dateTime, String status) {
         HBox card = new HBox();
         card.setSpacing(20);
         card.setStyle("-fx-padding: 15; -fx-border-color: #5A39D2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #F3F3F3;");
@@ -108,7 +125,7 @@ public class ListaConsultasController {
         Text patientText = new Text("Paciente: " + patientName);
         patientText.setStyle("-fx-font-size: 16; -fx-font-weight: bold;");
 
-        Text doctorText = new Text("CRM Médico: " + doctorCrm);
+        Text doctorText = new Text("Médico: " + doctorName + " (CRM: " + doctorCrm + ")");
         doctorText.setStyle("-fx-font-size: 14;");
 
         Text dateTimeText = new Text("Data e Hora: " + formatarDataHora(dateTime));
