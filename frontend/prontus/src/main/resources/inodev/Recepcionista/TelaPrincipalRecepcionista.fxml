@@ -97,7 +97,7 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="1207.0" layoutY="851.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #5a39d2;" text="LISTA" textFill="WHITE">
+      <Button layoutX="1207.0" layoutY="851.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #5a39d2;" text="LISTA" textFill="WHITE" onAction="#handleVerListaPacientes">
          <font>
             <Font size="18.0" />
          </font>
