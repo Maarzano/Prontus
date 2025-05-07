@@ -1,5 +1,6 @@
 package inodev;
 
+import inodev.controllers.TelaPrincipalMedicoController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,12 +27,16 @@ public class App extends Application {
         scene.setRoot(loadFXML(fxml));
     }
 
+    public static void setRoot(Parent root) {
+        scene.setRoot(root);
+    }
+
     public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
-    public static void redirectToRoleScreen(String role) throws IOException {
+    public static void redirectToRoleScreen(String role, int userId) throws IOException {
         switch (role) {
             case "ADM_SUPER":
                 setRoot("AdmSupremo/TelaPrincipalAdmSupremo");
@@ -43,7 +48,11 @@ public class App extends Application {
                 setRoot("Recepcionista/TelaPrincipalRecepcionista");
                 break;
             case "DOCTOR":
-                setRoot("Médico/TelaPrincipalMedico");
+                FXMLLoader loader = new FXMLLoader(App.class.getResource("/inodev/Médico/TelaPrincipalMedico.fxml"));
+                Parent root = loader.load();
+                TelaPrincipalMedicoController medicoController = loader.getController();
+                medicoController.setUserId(userId);
+                setRoot(root);
                 break;
             default:
                 throw new IllegalArgumentException("Unknown role: " + role);

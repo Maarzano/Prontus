@@ -97,17 +97,17 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="1207.0" layoutY="851.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #5a39d2;" text="LISTA" textFill="WHITE">
+      <Button layoutX="1207.0" layoutY="851.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #5a39d2;" text="LISTA" textFill="WHITE" onAction="#handleVerListaPacientes">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="1209.0" layoutY="715.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #5a39d2;" text="AGENDAR" textFill="WHITE">
+      <Button layoutX="1209.0" layoutY="715.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #5a39d2;" text="AGENDAR" textFill="WHITE" onAction="#handleAgendarConsulta">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="1203.0" layoutY="602.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2;" text="CONSULTAS" textFill="WHITE">
+      <Button layoutX="1203.0" layoutY="602.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2;" text="CONSULTAS" textFill="WHITE" onAction="#handleVerListaConsultas">
          <font>
             <Font size="18.0" />
          </font>

@@ -21,6 +21,8 @@ public class LoginController {
     @FXML
     private PasswordField passwordField;
 
+    private int loggedInUserId;
+
     @FXML
     public void handleLogin(ActionEvent event) {
         String email = emailField.getText();
@@ -41,8 +43,9 @@ public class LoginController {
             if (conn.getResponseCode() == 200) {
                 try (Scanner scanner = new Scanner(conn.getInputStream())) {
                     String response = scanner.useDelimiter("\\A").next();
+                    loggedInUserId = parseUserIdFromResponse(response);
                     String role = parseRoleFromResponse(response);
-                    App.redirectToRoleScreen(role);
+                    App.redirectToRoleScreen(role, loggedInUserId);
                 }
             } else {
                 showAlert("Login failed", "Invalid email or password.");
@@ -51,6 +54,10 @@ public class LoginController {
             e.printStackTrace();
             showAlert("Error", "An error occurred while trying to log in.");
         }
+    }
+
+    private int parseUserIdFromResponse(String response) {
+        return Integer.parseInt(response.split("\"id\":")[1].split(",")[0].trim());
     }
 
     private String parseRoleFromResponse(String response) {
