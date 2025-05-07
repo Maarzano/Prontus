@@ -11,7 +11,6 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.Scanner;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -43,22 +42,43 @@ public class AgendarConsultaController {
 
     private void carregarMedicos() {
         try {
-            URL url = new URL("http://localhost:8080/api/users?role=DOCTOR");
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("GET");
+            URL doctorsUrl = new URL("http://localhost:8080/api/doctors");
+            HttpURLConnection doctorsConn = (HttpURLConnection) doctorsUrl.openConnection();
+            doctorsConn.setRequestMethod("GET");
 
-            if (conn.getResponseCode() == 200) {
-                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                String response = reader.readLine();
+            if (doctorsConn.getResponseCode() == 200) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(doctorsConn.getInputStream()));
+                String doctorsResponse = reader.readLine();
                 reader.close();
 
-                JsonArray doctors = JsonParser.parseString(response).getAsJsonArray();
-                for (JsonElement element : doctors) {
-                    JsonObject doctor = element.getAsJsonObject();
-                    doctorComboBox.getItems().add(doctor.get("id").getAsString() + " - " + doctor.get("name").getAsString());
+                JsonArray doctors = JsonParser.parseString(doctorsResponse).getAsJsonArray();
+                for (JsonElement doctorElement : doctors) {
+                    JsonObject doctor = doctorElement.getAsJsonObject();
+                    int doctorId = doctor.get("id").getAsInt();
+                    int userId = doctor.get("userId").getAsInt();
+
+                    URL userUrl = new URL("http://localhost:8080/api/users/" + userId);
+                    HttpURLConnection userConn = (HttpURLConnection) userUrl.openConnection();
+                    userConn.setRequestMethod("GET");
+
+                    if (userConn.getResponseCode() == 200) {
+                        BufferedReader userReader = new BufferedReader(new InputStreamReader(userConn.getInputStream()));
+                        String userResponse = userReader.readLine();
+                        userReader.close();
+
+                        JsonObject user = JsonParser.parseString(userResponse).getAsJsonObject();
+                        String role = user.get("role").getAsString();
+
+                        if ("DOCTOR".equals(role)) {
+                            String doctorName = user.get("name").getAsString();
+                            doctorComboBox.getItems().add(doctorId + " - " + doctorName);
+                        }
+                    } else {
+                        System.out.println("Erro ao buscar usuário com ID: " + userId);
+                    }
                 }
             } else {
-                System.out.println("Erro ao buscar médicos: " + conn.getResponseCode());
+                System.out.println("Erro ao buscar médicos: " + doctorsConn.getResponseCode());
             }
         } catch (Exception e) {
             e.printStackTrace();
