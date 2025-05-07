@@ -54,7 +54,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="#5a39d2" layoutX="591.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA {NOME}  " wrappingWidth="826.681640625">
+      <Text fill="#5a39d2" layoutX="553.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA PRONTUS  " wrappingWidth="837.681640625">
          <font>
             <Font size="48.0" />
          </font>
