@@ -3,8 +3,8 @@ package inodev.controllers;
 import inodev.App;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.VBox;
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -12,6 +12,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.Scanner;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 public class AgendarConsultaController {
 
@@ -31,9 +36,6 @@ public class AgendarConsultaController {
     private Button btnAgendar, btnVoltar;
 
     @FXML
-    private VBox vboxContainer;
-
-    @FXML
     private void initialize() {
         carregarMedicos();
         carregarPacientes();
@@ -46,13 +48,13 @@ public class AgendarConsultaController {
             conn.setRequestMethod("GET");
 
             if (conn.getResponseCode() == 200) {
-                Scanner scanner = new Scanner(conn.getInputStream());
-                String response = scanner.useDelimiter("\\A").next();
-                scanner.close();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String response = reader.readLine();
+                reader.close();
 
-                com.google.gson.JsonArray doctors = com.google.gson.JsonParser.parseString(response).getAsJsonArray();
-                for (com.google.gson.JsonElement element : doctors) {
-                    com.google.gson.JsonObject doctor = element.getAsJsonObject();
+                JsonArray doctors = JsonParser.parseString(response).getAsJsonArray();
+                for (JsonElement element : doctors) {
+                    JsonObject doctor = element.getAsJsonObject();
                     doctorComboBox.getItems().add(doctor.get("id").getAsString() + " - " + doctor.get("name").getAsString());
                 }
             } else {
@@ -70,13 +72,13 @@ public class AgendarConsultaController {
             conn.setRequestMethod("GET");
 
             if (conn.getResponseCode() == 200) {
-                Scanner scanner = new Scanner(conn.getInputStream());
-                String response = scanner.useDelimiter("\\A").next();
-                scanner.close();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String response = reader.readLine();
+                reader.close();
 
-                com.google.gson.JsonArray patients = com.google.gson.JsonParser.parseString(response).getAsJsonArray();
-                for (com.google.gson.JsonElement element : patients) {
-                    com.google.gson.JsonObject patient = element.getAsJsonObject();
+                JsonArray patients = JsonParser.parseString(response).getAsJsonArray();
+                for (JsonElement element : patients) {
+                    JsonObject patient = element.getAsJsonObject();
                     patientComboBox.getItems().add(patient.get("id").getAsString() + " - " + patient.get("name").getAsString());
                 }
             } else {
@@ -104,6 +106,11 @@ public class AgendarConsultaController {
             int patientId = Integer.parseInt(selectedPatient.split(" - ")[0]);
             LocalDateTime dateTime = LocalDateTime.of(date, LocalTime.parse(time));
 
+            if (!isHorarioDisponivel(doctorId, dateTime)) {
+                showAlert("Erro", "Já existe uma consulta marcada nesse horário ou em um intervalo de 30 minutos.");
+                return;
+            }
+
             URL url = new URL("http://localhost:8080/api/schedulings");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
@@ -129,6 +136,33 @@ public class AgendarConsultaController {
             e.printStackTrace();
             showAlert("Erro", "Ocorreu um erro ao tentar agendar a consulta.");
         }
+    }
+
+    private boolean isHorarioDisponivel(int doctorId, LocalDateTime dateTime) {
+        try {
+            URL url = new URL("http://localhost:8080/api/schedulings?doctorId=" + doctorId);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+
+            if (conn.getResponseCode() == 200) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                String response = reader.readLine();
+                reader.close();
+
+                JsonArray schedulings = JsonParser.parseString(response).getAsJsonArray();
+                for (JsonElement element : schedulings) {
+                    JsonObject scheduling = element.getAsJsonObject();
+                    LocalDateTime existingDateTime = LocalDateTime.parse(scheduling.get("dateTime").getAsString());
+
+                    if (Math.abs(existingDateTime.until(dateTime, java.time.temporal.ChronoUnit.MINUTES)) < 30) {
+                        return false;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 
     @FXML
