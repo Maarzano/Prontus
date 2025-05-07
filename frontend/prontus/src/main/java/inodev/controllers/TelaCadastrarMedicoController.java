@@ -138,7 +138,6 @@ public class TelaCadastrarMedicoController {
         addressConn.setRequestProperty("Content-Type", "application/json");
         addressConn.setDoOutput(true);
 
-        // Use the correct JSON structure for the address
         String addressJson = String.format(
             "{\"street\": \"%s\", \"cep\": \"%s\", \"number\": \"%s\", \"neighborhood\": \"%s\", \"city\": \"%s\", \"state\": \"%s\"}",
             rua, cep, numero, bairro, cidade, estado
@@ -168,7 +167,6 @@ public class TelaCadastrarMedicoController {
         doctorConn.setRequestProperty("Content-Type", "application/json");
         doctorConn.setDoOutput(true);
 
-        // Use the correct JSON structure for the doctor
         String doctorJson = String.format(
             "{\"crm\": \"%s\", \"userId\": %s, \"specialtyId\": %s, \"addressId\": %s}",
             crm, userId, specialtyId, addressId
@@ -202,7 +200,6 @@ public class TelaCadastrarMedicoController {
         alert.showAndWait();
     }
 
-    // Enum for Specialties
     public enum Specialties {
         ACUPUNTURA,
         ALERGIA_E_IMUNOLOGIA,

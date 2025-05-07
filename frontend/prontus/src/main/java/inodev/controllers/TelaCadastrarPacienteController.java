@@ -48,10 +48,8 @@ public class TelaCadastrarPacienteController {
         String estado = estadoField.getText();
 
         try {
-            // Step 1: Create an address
             String addressId = createAddress(rua, bairro, cep, numero, cidade, estado);
 
-            // Step 2: Create a patient linked to the created address
             createPatient(nome, cpf, dataNasc, celular, email, addressId);
 
             showAlert("Sucesso", "Paciente cadastrado com sucesso!");
@@ -63,7 +61,6 @@ public class TelaCadastrarPacienteController {
     }
 
     private String createAddress(String rua, String bairro, String cep, String numero, String cidade, String estado) throws Exception {
-        // Validate required fields
         if (rua == null || rua.trim().isEmpty()) {
             throw new Exception("O campo Rua não pode estar vazio.");
         }
@@ -89,7 +86,6 @@ public class TelaCadastrarPacienteController {
         addressConn.setRequestProperty("Content-Type", "application/json");
         addressConn.setDoOutput(true);
 
-        // Use the correct JSON structure for the address
         String addressJson = String.format(
             "{\"street\": \"%s\", \"cep\": \"%s\", \"number\": \"%s\", \"neighborhood\": \"%s\", \"city\": \"%s\", \"state\": \"%s\"}",
             rua, cep, numero, bairro, cidade, estado
