@@ -27,4 +27,9 @@ public class TelaPrincipalRecepcionistaController {
     public void handleAgendarConsulta(ActionEvent event) throws IOException {
         App.setRoot("Recepcionista/AgendarConsulta");
     }
+
+    @FXML
+    public void handleVerListaConsultas(ActionEvent event) throws IOException {
+        App.setRoot("Recepcionista/ListaConsultas");
+    }
 }
