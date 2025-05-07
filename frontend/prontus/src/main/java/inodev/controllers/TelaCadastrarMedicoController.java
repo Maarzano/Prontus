@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class TelaCadastrarMedicoController {
 
     @FXML
-    private TextField nomeField, cpfField, emailField, celularField, crmField;
+    private TextField nomeField, cpfField, emailField, celularField, crmField, senhaField;
     @FXML
     private ComboBox<String> especialidadeComboBox;
     @FXML
@@ -23,7 +23,6 @@ public class TelaCadastrarMedicoController {
 
     @FXML
     private void initialize() {
-        // Populate the ComboBox with the Specialties enum values
         for (Specialties specialty : Specialties.values()) {
             especialidadeComboBox.getItems().add(specialty.name());
         }
@@ -46,7 +45,8 @@ public class TelaCadastrarMedicoController {
         String email = emailField.getText();
         String celular = celularField.getText();
         String crm = crmField.getText();
-        String especialidade = especialidadeComboBox.getValue(); // Get selected specialty
+        String especialidade = especialidadeComboBox.getValue();
+        String senha = senhaField.getText(); // Retrieve the password
         String rua = ruaField.getText();
         String bairro = bairroField.getText();
         String cep = cepField.getText();
@@ -55,16 +55,12 @@ public class TelaCadastrarMedicoController {
         String estado = estadoField.getText();
 
         try {
-            // Step 1: Create a user
-            String userId = createUser(nome, cpf, email, celular);
+            String userId = createUser(nome, cpf, email, celular, senha); // Pass the password
 
-            // Step 2: Create a specialty
             String specialtyId = createSpecialty(especialidade);
 
-            // Step 3: Create an address
             String addressId = createAddress(rua, bairro, cep, numero, cidade, estado);
 
-            // Step 4: Create a doctor
             createDoctor(crm, specialtyId, userId, addressId);
 
             showAlert("Sucesso", "Médico cadastrado com sucesso!");
@@ -75,7 +71,7 @@ public class TelaCadastrarMedicoController {
         }
     }
 
-    private String createUser(String nome, String cpf, String email, String celular) throws Exception {
+    private String createUser(String nome, String cpf, String email, String celular, String senha) throws Exception {
         URL userUrl = new URL("http://localhost:8080/api/users");
         HttpURLConnection userConn = (HttpURLConnection) userUrl.openConnection();
         userConn.setRequestMethod("POST");
@@ -83,8 +79,8 @@ public class TelaCadastrarMedicoController {
         userConn.setDoOutput(true);
 
         String userJson = String.format(
-            "{\"name\": \"%s\", \"cpf\": \"%s\", \"email\": \"%s\", \"cellphone\": \"%s\", \"password\": \"123456\", \"role\": \"DOCTOR\"}",
-            nome, cpf, email, celular
+            "{\"name\": \"%s\", \"cpf\": \"%s\", \"email\": \"%s\", \"cellphone\": \"%s\", \"password\": \"%s\", \"role\": \"DOCTOR\"}",
+            nome, cpf, email, celular, senha
         );
 
         try (OutputStreamWriter writer = new OutputStreamWriter(userConn.getOutputStream())) {
