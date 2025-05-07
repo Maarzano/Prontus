@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.image.Image?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarRecepcionistaController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" layoutX="-14.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1916.0">
          <fill>
@@ -50,31 +51,31 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="448.0" layoutX="206.0" layoutY="316.0" stroke="BLACK" strokeType="INSIDE" width="1488.0" />
-      <TextField layoutX="448.0" layoutY="429.0" prefHeight="44.0" prefWidth="1037.0">
+      <TextField fx:id="nomeField" layoutX="450.0" layoutY="363.0" prefHeight="49.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="556.0" layoutY="363.0" prefHeight="49.0" prefWidth="929.0">
+      <TextField fx:id="cpfField" layoutX="450.0" layoutY="429.0" prefHeight="44.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="450.0" layoutY="488.0" prefHeight="39.0" prefWidth="1037.0">
+      <TextField fx:id="celularField" layoutX="450.0" layoutY="488.0" prefHeight="39.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="450.0" layoutY="555.0" prefHeight="49.0" prefWidth="1037.0">
+      <TextField fx:id="emailField" layoutX="450.0" layoutY="555.0" prefHeight="49.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="445.0" layoutY="624.0" prefHeight="39.0" prefWidth="1043.0">
+      <PasswordField fx:id="senhaField" layoutX="450.0" layoutY="624.0" prefHeight="39.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
-      </TextField>
+      </PasswordField>
       <Text layoutX="251.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
          <font>
             <Font size="36.0" />
@@ -100,12 +101,12 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button layoutX="728.0" layoutY="859.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="212.0" style="-fx-background-color: #5A39D2;" text="CANCELAR" textFill="WHITE">
+      <Button layoutX="728.0" layoutY="859.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="70.0" prefWidth="212.0" style="-fx-background-color: #5A39D2;" text="CANCELAR" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
       </Button>
-      <Button layoutX="979.0" layoutY="858.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="220.0" style="-fx-background-color: #5A39D2;" text="SALVAR" textFill="WHITE">
+      <Button layoutX="979.0" layoutY="858.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="70.0" prefWidth="220.0" style="-fx-background-color: #5A39D2;" text="SALVAR" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
