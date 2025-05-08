@@ -38,7 +38,7 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="790.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Lista de Adm's">
+      <Text fill="WHITE" layoutX="790.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Lista de Usuários">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
