@@ -46,7 +46,7 @@ public class TelaCadastrarMedicoController {
         String celular = celularField.getText();
         String crm = crmField.getText();
         String especialidade = especialidadeComboBox.getValue();
-        String senha = senhaField.getText(); // Retrieve the password
+        String senha = senhaField.getText();
         String rua = ruaField.getText();
         String bairro = bairroField.getText();
         String cep = cepField.getText();
@@ -55,7 +55,7 @@ public class TelaCadastrarMedicoController {
         String estado = estadoField.getText();
 
         try {
-            String userId = createUser(nome, cpf, email, celular, senha); // Pass the password
+            String userId = createUser(nome, cpf, email, celular, senha);
 
             String specialtyId = createSpecialty(especialidade);
 

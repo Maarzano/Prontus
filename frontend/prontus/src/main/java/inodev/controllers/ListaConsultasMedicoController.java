@@ -36,7 +36,6 @@ public class ListaConsultasMedicoController {
 
     private void carregarConsultas() {
         try {
-            // Fetch the doctor associated with the logged-in user
             URL doctorUrl = new URL("http://localhost:8080/api/doctors");
             HttpURLConnection doctorConn = (HttpURLConnection) doctorUrl.openConnection();
             doctorConn.setRequestMethod("GET");
@@ -69,12 +68,11 @@ public class ListaConsultasMedicoController {
                 return doctor.get("id").getAsInt();
             }
         }
-        return -1; // Return -1 if no doctor is found for the given userId
+        return -1;
     }
 
     private void fetchConsultations(int doctorId) {
         try {
-            // Fetch consultations for the specific doctor
             URL url = new URL("http://localhost:8080/api/schedulings?doctorId=" + doctorId);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
