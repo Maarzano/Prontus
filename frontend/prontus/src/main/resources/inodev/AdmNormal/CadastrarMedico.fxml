@@ -3,6 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
@@ -13,27 +15,27 @@
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5a39d2" height="140.0" layoutX="-20.0" layoutY="-16.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="510.0" layoutX="275.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="1386.0" />
-      <Text fill="WHITE" layoutX="141.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus" wrappingWidth="204.6640625">
+      <Text fill="WHITE" layoutX="124.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text layoutX="286.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
+      <Text layoutX="286.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="1085.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+      <Text layoutX="1087.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="696.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRM:">
+      <Text layoutX="696.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRM:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="286.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+      <Text layoutX="286.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
          <font>
             <Font size="36.0" />
          </font>
@@ -51,7 +53,7 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <TextField fx:id="crmField" layoutX="780.0" layoutY="391.0" prefHeight="46.0" prefWidth="282.0" style="-fx-border-color: aaa1a1;">
+      <TextField fx:id="crmField" layoutX="780.0" layoutY="388.0" prefHeight="46.0" prefWidth="282.0" style="-fx-border-color: aaa1a1;">
          <font>
             <Font size="24.0" />
          </font></TextField>
@@ -59,32 +61,32 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <TextField fx:id="celularField" layoutX="1203.0" layoutY="391.0" prefHeight="46.0" prefWidth="368.0" style="-fx-border-color: aaa1a1;">
+      <TextField fx:id="celularField" layoutX="1205.0" layoutY="388.0" prefHeight="46.0" prefWidth="368.0" style="-fx-border-color: aaa1a1;">
          <font>
             <Font size="24.0" />
          </font></TextField>
       <Line endX="5.0" endY="3.0" layoutX="361.0" layoutY="29.0" startX="5.0" startY="61.0" stroke="WHITE" />
-      <Button layoutX="684.0" layoutY="894.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #5A39D2;" text="CANCELAR" textFill="WHITE">
+      <Button layoutX="684.0" layoutY="894.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="914.0" layoutY="897.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="55.0" prefWidth="210.0" style="-fx-background-color: #5A39D2;" text="SALVAR" textFill="WHITE">
+      <Button layoutX="914.0" layoutY="897.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="55.0" prefWidth="210.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="SALVAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Text fill="#5a39d2" layoutX="583.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="CADASTRAMENTO MEDICO">
+      <Text fill="#5a39d2" layoutX="676.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="CADASTRO MEDICO">
          <font>
             <Font size="48.0" />
          </font>
       </Text>
-      <Text layoutX="948.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+      <Text layoutX="939.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="295.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:">
+      <Text layoutX="290.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:">
          <font>
             <Font size="36.0" />
          </font>
@@ -112,7 +114,7 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <Text layoutX="960.0" layoutY="581.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP:">
+      <Text layoutX="957.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP:">
          <font>
             <Font size="36.0" />
          </font>
@@ -121,7 +123,7 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <Text layoutX="877.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:">
+      <Text layoutX="879.0" layoutY="668.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:">
          <font>
             <Font size="36.0" />
          </font>
@@ -130,7 +132,7 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <Text layoutX="290.0" layoutY="726.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:">
+      <Text layoutX="286.0" layoutY="738.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:">
          <font>
             <Font size="36.0" />
          </font>
@@ -139,7 +141,7 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <Text layoutX="883.0" layoutY="727.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
+      <Text layoutX="883.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
          <font>
             <Font size="36.0" />
          </font>
@@ -148,5 +150,10 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
+      <ImageView fitHeight="70.0" fitWidth="73.0" layoutX="42.0" layoutY="26.0">
+         <image>
+            <Image url="@../imagens/image-removebg-preview%20(3).png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>

@@ -1,0 +1,73 @@
+/* Estilo geral do painel */
+.root {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: 'Arial', sans-serif;
+}
+
+/* Estilo do título principal */
+.text {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-fill: #5A39D2;
+}
+
+/* Estilo do título da aplicação */
+#titulo {
+    -fx-fill: white;
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+/* Estilo do campo de data */
+#datePicker {
+    -fx-border-color: #5A39D2;
+    -fx-border-width: 2;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-background-color: white;
+}
+
+/* Estilo dos rótulos de texto */
+.text {
+    -fx-font-size: 14px;
+    -fx-fill: #333;
+}
+
+/* Estilo das ComboBoxes (Médico, Paciente) */
+#doctorComboBox, #patientComboBox {
+    -fx-border-color: #5A39D2;
+    -fx-border-width: 2;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-background-color: white;
+    -fx-opacity: 0.8;
+}
+
+/* Estilo do campo de texto para hora */
+#timeField {
+    -fx-border-color: #5A39D2;
+    -fx-border-width: 2;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 50px;
+    -fx-background-color: white;
+}
+
+/* Estilo do painel do topo */
+.rectangle {
+    -fx-fill: linear-gradient(to bottom right, #5A39D2, #9B6FD9);
+    -fx-arc-width: 5;
+    -fx-arc-height: 5;
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+}
+
+/* Estilo das TextFields e ComboBoxes em foco */
+#datePicker:focused, #doctorComboBox:focused, #patientComboBox:focused, #timeField:focused {
+    -fx-border-color: #9B6FD9;
+}
+
+/* Estilo dos textos nas caixas de seleção (ComboBox) */
+.combo-box {
+    -fx-font-size: 16px;
+    -fx-text-fill: #5A39D2;
+}

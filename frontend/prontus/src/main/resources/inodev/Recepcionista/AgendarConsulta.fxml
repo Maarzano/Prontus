@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.AgendarConsultaController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../styles/agendarConsulta.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.AgendarConsultaController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
          <fill>
@@ -37,20 +32,44 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text fill="#5A39D2" layoutX="750.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agendar Consulta">
+      <Text fill="#5A39D2" layoutX="743.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="AGENDAR CONSULTA">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <DatePicker fx:id="datePicker" layoutX="100.0" layoutY="300.0" prefHeight="50.0" prefWidth="400.0" />
-      <Text layoutX="100.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha a Data:" />
-      <ComboBox fx:id="doctorComboBox" layoutX="600.0" layoutY="300.0" prefHeight="50.0" prefWidth="400.0" />
-      <Text layoutX="600.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha o Médico:" />
-      <ComboBox fx:id="patientComboBox" layoutX="600.0" layoutY="400.0" prefHeight="50.0" prefWidth="400.0" />
-      <Text layoutX="600.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha o Paciente:" />
-      <TextField fx:id="timeField" layoutX="100.0" layoutY="400.0" prefHeight="50.0" prefWidth="400.0" />
-      <Text layoutX="100.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário (HH:mm):" />
-      <Button fx:id="btnAgendar" layoutX="800.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleAgendar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #5A39D2;" text="Agendar" textFill="WHITE" />
-      <Button fx:id="btnVoltar" layoutX="1050.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #5A39D2;" text="Voltar" textFill="WHITE" />
+      <DatePicker fx:id="datePicker" layoutX="552.0" layoutY="332.0" prefHeight="50.0" prefWidth="400.0" style="-fx-border-color: #5A39D2;" />
+      <Text layoutX="552.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha a Data:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <ComboBox fx:id="doctorComboBox" editable="true" layoutX="1052.0" layoutY="332.0" prefHeight="50.0" prefWidth="400.0" promptText="Médico" style="-fx-border-color: #5A39D2; -fx-background-color: #FFFFFF; -fx-opacity: 50;" />
+      <Text layoutX="1052.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha o Médico:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <ComboBox fx:id="patientComboBox" editable="true" layoutX="1053.0" layoutY="456.0" prefHeight="50.0" prefWidth="400.0" promptText="Paciente" style="-fx-border-color: #5A39D2; -fx-background-color: #FFFFFF; -fx-opacity: 50;" />
+      <Text layoutX="1053.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Escolha o Paciente:">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <TextField fx:id="timeField" layoutX="553.0" layoutY="456.0" prefHeight="50.0" prefWidth="400.0" style="-fx-border-color: #5A39D2;" />
+      <Text layoutX="553.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Horário (HH:mm):">
+         <font>
+            <Font size="19.0" />
+         </font></Text>
+      <Button fx:id="btnAgendar" layoutX="1041.0" layoutY="606.0" mnemonicParsing="false" onAction="#handleAgendar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20; -fx-font-size: 20; -fx-text-fill: #FFFFFF; -fx-font-weight: bold;" text="Agendar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
+      <Button fx:id="btnVoltar" layoutX="772.0" layoutY="604.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20; -fx-font-size: 20; -fx-text-fill: #FFFFFF;" styleClass="text" text="Voltar" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <ImageView fitHeight="88.0" fitWidth="99.0" layoutX="46.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/image-removebg-preview%20(3).png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="358.0" layoutY="24.0" orientation="VERTICAL" prefHeight="92.0" prefWidth="2.0" />
    </children>
 </Pane>

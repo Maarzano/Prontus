@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListaADMsController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListaADMsController">
    <children>
       <!-- Header -->
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
@@ -45,14 +38,14 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="790.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Lista de Usuários">
+      <Text fill="WHITE" layoutX="790.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Lista de Usuários">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Button fx:id="btnVoltar" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2;" text="Voltar" textFill="WHITE">
+      <Button fx:id="btnVoltar" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Voltar" textFill="WHITE">
          <font>
-            <Font size="18.0" />
+            <Font name="System Bold" size="20.0" />
          </font>
       </Button>
 
@@ -69,6 +62,6 @@
             <Image url="@../imagens/image-removebg-preview%20(3).png" />
          </image>
       </ImageView>
-      <Line endX="-96.0" endY="-44.0" layoutX="468.0" layoutY="64.0" startX="-96.0" startY="50.0" />
+      <Line endX="-96.0" endY="-44.0" layoutX="468.0" layoutY="64.0" startX="-96.0" startY="50.0" stroke="WHITE" />
    </children>
 </Pane>
