@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" layoutX="-2.0" layoutY="-4.0" stroke="BLACK" strokeType="INSIDE" width="1904.0">
          <fill>
@@ -27,13 +27,13 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Text fill="WHITE" layoutX="124.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+      <Text fill="WHITE" layoutX="124.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
       <Line endX="70.0" endY="-1.0" layoutX="252.0" layoutY="26.0" startX="70.0" startY="73.0" stroke="WHITE" />
-      <Text fill="#5a39d2" layoutX="516.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-family: regular;" text="EDIÇÃO DE DADOS ADMIN NORMAL">
+      <Text fill="#5a39d2" layoutX="516.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2) dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="EDIÇÃO DE DADOS ADMIN NORMAL">
          <font>
             <Font size="48.0" />
          </font>
@@ -43,7 +43,7 @@
             <Font size="26.0" />
          </font>
       </Button>
-      <Button layoutX="965.0" layoutY="943.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="SALVAR" textFill="WHITE">
+      <Button layoutX="965.0" layoutY="944.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="SALVAR" textFill="WHITE">
          <font>
             <Font size="26.0" />
          </font>
@@ -84,7 +84,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="988.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+      <Text layoutX="988.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
          <font>
             <Font size="36.0" />
          </font>
@@ -92,7 +92,7 @@
       <TextArea layoutX="566.0" layoutY="418.0" prefHeight="48.0" prefWidth="1044.0" />
       <TextArea layoutX="450.0" layoutY="487.0" prefHeight="48.0" prefWidth="546.0" />
       <TextArea layoutX="450.0" layoutY="629.0" prefHeight="48.0" prefWidth="522.0" />
-      <TextArea layoutX="1116.0" layoutY="636.0" prefHeight="48.0" prefWidth="492.0" />
+      <TextArea layoutX="1118.0" layoutY="629.0" prefHeight="48.0" prefWidth="492.0" />
       <TextArea layoutX="450.0" layoutY="698.0" prefHeight="48.0" prefWidth="1162.0" />
       <TextArea layoutX="450.0" layoutY="561.0" prefHeight="48.0" prefWidth="546.0" />
       <Button layoutX="1512.0" layoutY="234.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30;" text="EXCLUIR DADOS" textFill="WHITE">
@@ -100,5 +100,10 @@
             <Font size="26.0" />
          </font>
       </Button>
+      <ImageView fitHeight="70.0" fitWidth="73.0" layoutX="35.0" layoutY="31.0">
+         <image>
+            <Image url="@imagens/ecg_heart.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
