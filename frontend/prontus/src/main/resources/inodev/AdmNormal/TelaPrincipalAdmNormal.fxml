@@ -52,7 +52,7 @@
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-background-color: #5a39d2;" text="Sair" textFill="WHITE">
+            <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Sair" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

@@ -49,7 +49,7 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-background-color: #5a39d2;" text="Sair" textFill="WHITE">
+      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Sair" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -65,11 +65,6 @@
          </cursor>
       </Rectangle>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="102.0" layoutX="552.0" layoutY="564.0" stroke="BLACK" strokeType="OUTSIDE" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" width="832.0" />
-      <ImageView fitHeight="76.0" fitWidth="94.0" layoutX="581.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../Downloads/Design%20sem%20nome.png" />
-         </image>
-      </ImageView>
       <Text layoutX="644.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para cadastrar um novo Administrador">
          <font>
             <Font name="System Bold" size="23.0" />

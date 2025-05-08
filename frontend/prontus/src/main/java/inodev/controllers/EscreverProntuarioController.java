@@ -88,7 +88,7 @@ public class EscreverProntuarioController {
     }
 
     @FXML
-    private void handleCancelar() {
+    private void handleVoltar() {
         try {
             App.setRoot("Médico/ListaConsultasMedico");
         } catch (Exception e) {
