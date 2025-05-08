@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaPrincipalMedicoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
+         <image>
+            <Image url="@../imagens/logoProntus.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Médico">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Sair" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#5a39d2" layoutX="553.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA PRONTUS  " wrappingWidth="837.681640625">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Rectangle fill="WHITE" height="102.0" layoutX="552.0" layoutY="439.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" width="832.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Rectangle>
+      <ImageView fitHeight="76.0" fitWidth="94.0" layoutX="581.0" layoutY="450.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Downloads/Design%20sem%20nome.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="672.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para ver suas consultas">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5a39d2;" text="CONSULTAS" textFill="WHITE" onAction="#handleVerConsultas">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.LoginController">
+   <children>
+      <!-- Header -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="90.0" fitWidth="73.0" layoutX="60.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Downloads/cora-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="159.0" layoutY="35.0" style="-fx-font-weight: bold;" text="InoDev" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+
+      <!-- Login Card -->
+      <Pane layoutX="700.0" layoutY="300.0" prefHeight="476.0" prefWidth="457.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);">
+         <children>
+            <Label layoutX="29.0" layoutY="50.0" style="-fx-font-weight: bold;" text="Bem-vindo ao Prontus!" textFill="#5A39D2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="29.0" layoutY="100.0" text="Email" />
+            <TextField fx:id="emailField" layoutX="29.0" layoutY="130.0" prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10; -fx-border-color: #CCCCCC; -fx-border-radius: 10;">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+            <Label layoutX="29.0" layoutY="190.0" text="Senha" />
+            <PasswordField fx:id="passwordField" layoutX="29.0" layoutY="220.0" prefHeight="40.0" prefWidth="400.0" style="-fx-background-radius: 10; -fx-border-color: #CCCCCC; -fx-border-radius: 10;" />
+            <Button layoutX="154.0" layoutY="300.0" onAction="#handleLogin" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="304.0" layoutY="357.0" text="Esqueceu sua senha?" textFill="RED" underline="true" />
+         </children>
+      </Pane>
+
+      <!-- Error Label -->
+      <Label fx:id="errorLabel" layoutX="850.0" layoutY="820.0" textFill="RED" visible="false" />
+      <Line endX="-28.0" endY="-46.0" layoutX="392.0" layoutY="70.0" startX="-28.0" startY="52.0" stroke="WHITE" />
+      <Label layoutX="756.0" layoutY="35.0" style="-fx-font-weight: bold;" text="Sistema Prontus" textFill="WHITE">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="73.0" layoutX="86.0" layoutY="35.0">
+         <image>
+            <Image url="@../../../../../../../../Downloads/Logotipo%20Geométrico%20em%20Tons%20Vibrantes.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="73.0" layoutX="86.0" layoutY="38.0">
+         <image>
+            <Image url="@imagens/Logotipo%20Geométrico%20em%20Tons%20Vibrantes.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

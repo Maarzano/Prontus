@@ -1,0 +1,47 @@
+.barraSuperior
+{
+        -fx-background-color: linear-gradient(to right, #5A39D2, black);
+}
+
+.label-bold1
+{
+        -fx-font-size: 30;
+        -fx-font-family: sans-serif;
+        -fx-font-weight: 800;
+        -fx-text-fill: #FFFFFF;
+}
+
+.label-bold2
+{
+        -fx-font-size: 30;
+        -fx-font-family: sans-serif;
+        -fx-font-weight: 800;
+        -fx-text-fill: #5A39D2 ;
+}
+.my-pane {
+        -fx-border-width: 1.5;         /* Define a largura da borda */
+        -fx-border-color: black;     /* Define a cor da borda */
+        -fx-border-style: solid;
+        -fx-border-radius: 20;
+}
+
+.separator1 {
+        -fx-background-color: black;
+}
+
+.label-bold3
+{
+        -fx-font-size: 15;
+        -fx-font-family: Inter;
+        -fx-font-weight: 900;
+}
+
+.button
+{
+        -fx-background-color: transparent;
+}
+
+.circulo1
+{
+        -fx-background-color: transparent;
+}

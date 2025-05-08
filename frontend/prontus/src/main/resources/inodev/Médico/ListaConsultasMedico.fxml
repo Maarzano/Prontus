@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.shape.Line?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListaConsultasMedicoController">
+   <children>
+      <!-- Header -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
+         <image>
+            <Image url="@../imagens/logoProntus.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Lista de Consultas">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      
+      <Button fx:id="btnVoltar" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+
+      <!-- Content -->
+      <ScrollPane layoutX="362.0" layoutY="250.0" prefHeight="747.0" prefWidth="1243.0" style="-fx-background-color: transparent;">
+         <content>
+            <VBox fx:id="vboxContainer" alignment="TOP_CENTER" prefHeight="22.0" prefWidth="1241.0" spacing="20.0" style="-fx-padding: 20; -fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-radius: 10; -fx-background-radius: 10;">
+               <!-- Cards will be dynamically added here -->
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="46.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/image-removebg-preview%20(3).png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="370.0" layoutY="23.0" orientation="VERTICAL" prefHeight="101.0" prefWidth="2.0" />
+   </children>
+</Pane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+   <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
+      <image>
+         <Image url="@imagens/logoProntus.png" />
+      </image>
+   </ImageView>
+   <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+      <font>
+         <Font name="System Bold" size="48.0" />
+      </font>
+   </Text>
+   <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
+   <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Editar Dados Administrador">
+      <font>
+         <Font name="System Bold" size="48.0" />
+      </font>
+   </Text>
+      <Button layoutX="643.0" layoutY="944.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="VOLTAR" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Button layoutX="965.0" layoutY="944.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 30;" text="SALVAR" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="458.0" layoutX="209.0" layoutY="369.0" stroke="BLACK" strokeType="INSIDE" width="1558.0" />
+      <Text layoutX="283.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="283.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="283.0" layoutY="590.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="283.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="283.0" layoutY="719.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="988.0" layoutY="659.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextArea layoutX="566.0" layoutY="418.0" prefHeight="48.0" prefWidth="1044.0" />
+      <TextArea layoutX="450.0" layoutY="487.0" prefHeight="48.0" prefWidth="546.0" />
+      <TextArea layoutX="450.0" layoutY="629.0" prefHeight="48.0" prefWidth="522.0" />
+      <TextArea layoutX="1118.0" layoutY="629.0" prefHeight="48.0" prefWidth="492.0" />
+      <TextArea layoutX="450.0" layoutY="698.0" prefHeight="48.0" prefWidth="1162.0" />
+      <TextArea layoutX="450.0" layoutY="561.0" prefHeight="48.0" prefWidth="546.0" />
+      <Button layoutX="1512.0" layoutY="234.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #ff0000; -fx-background-radius: 30;" text="EXCLUIR DADOS" textFill="WHITE">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

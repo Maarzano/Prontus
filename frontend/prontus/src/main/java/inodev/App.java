@@ -1,5 +1,7 @@
 package inodev;
 
+import inodev.controllers.AgendarConsultaController;
+import inodev.controllers.TelaPrincipalMedicoController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,18 +19,48 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 1920, 1005);
+        scene = new Scene(loadFXML("Login"), 1920, 1005);
         stage.setScene(scene);
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+    public static void setRoot(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
+        Parent root = fxmlLoader.load();
+        scene.setRoot(root);
     }
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+    public static void setRoot(Parent root) {
+        scene.setRoot(root);
+    }
+
+    public static Parent loadFXML(String fxml) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
+        Parent root = fxmlLoader.load();
+        return root;
+    }
+
+    public static void redirectToRoleScreen(String role, int userId) throws IOException {
+        switch (role) {
+            case "ADM_SUPER":
+                setRoot("AdmSupremo/TelaPrincipalAdmSupremo");
+                break;
+            case "ADM":
+                setRoot("AdmNormal/TelaPrincipalAdmNormal");
+                break;
+            case "RECEPCIONIST":
+                setRoot("Recepcionista/TelaPrincipalRecepcionista");
+                break;
+            case "DOCTOR":
+                FXMLLoader loader = new FXMLLoader(App.class.getResource("/inodev/Médico/TelaPrincipalMedico.fxml"));
+                Parent root = loader.load();
+                TelaPrincipalMedicoController medicoController = loader.getController();
+                medicoController.setUserId(userId);
+                setRoot(root);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown role: " + role);
+        }
     }
 
     public static void main(String[] args) {

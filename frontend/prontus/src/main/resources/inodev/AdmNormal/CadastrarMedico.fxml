@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: ffffff; -fx-border-color: #AAA1A1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarMedicoController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
+         <image>
+            <Image url="@../imagens/logoProntus.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Cadastrar Médico ">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="510.0" layoutX="275.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="1386.0" />
+      <Text layoutX="286.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="1087.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="696.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CRM:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="286.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="290.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cpfField" layoutX="356.0" layoutY="391.0" prefHeight="46.0" prefWidth="311.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="nomeField" layoutX="564.0" layoutY="303.0" prefHeight="46.0" prefWidth="1016.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="crmField" layoutX="780.0" layoutY="388.0" prefHeight="46.0" prefWidth="282.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="emailField" layoutX="398.0" layoutY="469.0" prefHeight="46.0" prefWidth="507.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="celularField" layoutX="1205.0" layoutY="388.0" prefHeight="46.0" prefWidth="368.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Button layoutX="684.0" layoutY="894.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="914.0" layoutY="897.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="55.0" prefWidth="210.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="SALVAR" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Text layoutX="939.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="290.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="1282.0" layoutY="588.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="numeroField" layoutX="1421.0" layoutY="551.0" prefHeight="46.0" prefWidth="153.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <TextField fx:id="senhaField" layoutX="1053.0" layoutY="468.0" prefHeight="46.0" prefWidth="519.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Text layoutX="290.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Especialidade:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="especialidadeComboBox" layoutX="528.0" layoutY="551.0" prefHeight="46.0" prefWidth="402.0" style="-fx-border-color: aaa1a1;" />
+      <TextField fx:id="bairroField" layoutX="991.0" layoutY="629.0" prefHeight="46.0" prefWidth="581.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Text layoutX="957.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cepField" layoutX="1030.0" layoutY="551.0" prefHeight="46.0" prefWidth="232.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Text layoutX="879.0" layoutY="668.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="ruaField" layoutX="383.0" layoutY="629.0" prefHeight="46.0" prefWidth="464.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Text layoutX="286.0" layoutY="738.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cidadeField" layoutX="422.0" layoutY="697.0" prefHeight="46.0" prefWidth="458.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Text layoutX="883.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="estadoField" layoutX="1003.0" layoutY="697.0" prefHeight="53.0" prefWidth="242.0" style="-fx-border-color: aaa1a1;">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+   </children>
+</Pane>
