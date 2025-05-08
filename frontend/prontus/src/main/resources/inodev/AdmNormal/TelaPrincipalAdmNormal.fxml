@@ -27,7 +27,7 @@
                               <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
                            </color>
                         </Stop>
-                        <Stop offset="1.0">  
+                        <Stop offset="1.0">
                            <color>
                               <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
                            </color>
@@ -36,9 +36,9 @@
                   </LinearGradient>
                </fill>
             </Rectangle>
-            <ImageView fitHeight="90.0" fitWidth="73.0" layoutX="60.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
                <image>
-                  <Image url="@../../Downloads/cora-removebg-preview.png" />
+                  <Image url="@../imagens/logoProntus.png" />
                </image>
             </ImageView>
             <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
@@ -47,12 +47,12 @@
                </font>
             </Text>
             <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
-            <Text fill="WHITE" layoutX="643.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="ADIMINISTRADO NORMAL">
+            <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Administrador">
                <font>
                   <Font name="System Bold" size="48.0" />
                </font>
             </Text>
-            <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="Sair" textFill="WHITE">
+            <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleLogout" prefHeight="53.0" prefWidth="220.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-background-color: #5a39d2;" text="Sair" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

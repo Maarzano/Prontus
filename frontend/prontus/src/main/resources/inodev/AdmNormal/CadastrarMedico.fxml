@@ -6,6 +6,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -13,13 +16,41 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: ffffff; -fx-border-color: #AAA1A1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarMedicoController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5a39d2" height="140.0" layoutX="-20.0" layoutY="-16.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="510.0" layoutX="275.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="1386.0" />
-      <Text fill="WHITE" layoutX="124.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3529411852359772" green="0.2235294133424759" blue="0.8235294222831726" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6117647290229797" green="0.3450980484485626" blue="0.8274509906768799" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
+         <image>
+            <Image url="@../imagens/logoProntus.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
+      <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Cadastrar Médico ">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="510.0" layoutX="275.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" width="1386.0" />
       <Text layoutX="286.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
          <font>
             <Font size="36.0" />
@@ -65,7 +96,6 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <Line endX="5.0" endY="3.0" layoutX="361.0" layoutY="29.0" startX="5.0" startY="61.0" stroke="WHITE" />
       <Button layoutX="684.0" layoutY="894.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
@@ -76,11 +106,6 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Text fill="#5a39d2" layoutX="676.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="CADASTRO MEDICO">
-         <font>
-            <Font size="48.0" />
-         </font>
-      </Text>
       <Text layoutX="939.0" layoutY="506.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
          <font>
             <Font size="36.0" />
@@ -150,10 +175,5 @@
          <font>
             <Font size="24.0" />
          </font></TextField>
-      <ImageView fitHeight="70.0" fitWidth="73.0" layoutX="42.0" layoutY="26.0">
-         <image>
-            <Image url="@../imagens/image-removebg-preview%20(3).png" />
-         </image>
-      </ImageView>
    </children>
 </Pane>

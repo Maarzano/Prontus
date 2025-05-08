@@ -9,7 +9,7 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarPacienteController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1904.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
@@ -27,32 +27,24 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="46.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
          <image>
-            <Image url="@../imagens/image-removebg-preview%20(3).png" />
+            <Image url="@../imagens/logoProntus.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="84.0" fitWidth="80.0" layoutX="1780.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@perfil-removebg-preview.png" />
-         </image>
-      </ImageView>
-      <Line endX="70.0" endY="-1.0" layoutX="302.0" layoutY="30.0" startX="70.0" startY="73.0" stroke="WHITE" />
-      <Text fill="WHITE" layoutX="164.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
+      <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text fill="#5a39d2" layoutX="609.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="CADASTRAMENTO PACIENTE">
+      <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
+      <Text fill="WHITE" layoutX="735.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Cadastrar Paciente">
          <font>
-            <Font size="48.0" />
+            <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <ImageView fitHeight="60.0" fitWidth="56.0" layoutX="192.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" rotate="180.0" style="FX: dropshadow(gaussian, black, 5, 0.3, 2, 2);">
-         <image>
-            <Image url="@next.png" />
-         </image>
-      </ImageView>
+
+
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="394.0" layoutX="274.0" layoutY="371.0" stroke="BLACK" strokeType="INSIDE" width="1430.0" />
       <Text layoutX="299.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:">
          <font>

@@ -73,7 +73,7 @@
 
       <!-- Error Label -->
       <Label fx:id="errorLabel" layoutX="850.0" layoutY="820.0" textFill="RED" visible="false" />
-      <Line endX="-28.0" endY="-46.0" layoutX="392.0" layoutY="70.0" startX="-28.0" startY="52.0" />
+      <Line endX="-28.0" endY="-46.0" layoutX="392.0" layoutY="70.0" startX="-28.0" startY="52.0" stroke="WHITE" />
       <Label layoutX="756.0" layoutY="35.0" style="-fx-font-weight: bold;" text="Sistema Prontus" textFill="WHITE">
          <font>
             <Font size="48.0" />

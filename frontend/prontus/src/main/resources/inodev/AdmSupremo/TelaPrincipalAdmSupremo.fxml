@@ -33,9 +33,9 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <ImageView fitHeight="90.0" fitWidth="73.0" layoutX="60.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
          <image>
-            <Image url="@../../Downloads/cora-removebg-preview.png" />
+            <Image url="@../imagens/logoProntus.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="161.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prontus">
@@ -90,15 +90,5 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="70.0" fitWidth="82.0" layoutX="579.0" layoutY="584.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@LISTA%20FOTO.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="79.0" fitWidth="73.0" layoutX="72.0" layoutY="25.0">
-         <image>
-            <Image url="@../imagens/image-removebg-preview%20(3).png" />
-         </image>
-      </ImageView>
    </children>
 </Pane>
