@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarPacienteController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.TelaCadastrarPacienteController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" layoutX="-2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="1904.0">
          <fill>
@@ -35,10 +27,9 @@
             </LinearGradient>
          </fill>
       </Rectangle>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaeaf5" height="64.0" layoutX="170.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" width="106.0" />
       <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="46.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@cora-removebg-preview.png" />
+            <Image url="@../imagens/image-removebg-preview%20(3).png" />
          </image>
       </ImageView>
       <ImageView fitHeight="84.0" fitWidth="80.0" layoutX="1780.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
@@ -52,7 +43,7 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Text fill="#5a39d2" layoutX="609.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="CADASTRAMENTO PACIENTE">
+      <Text fill="#5a39d2" layoutX="609.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="CADASTRAMENTO PACIENTE">
          <font>
             <Font size="48.0" />
          </font>
@@ -68,7 +59,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="304.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
+      <Text layoutX="299.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
          <font>
             <Font size="36.0" />
          </font>
@@ -87,29 +78,29 @@
       <TextField fx:id="cpfField" layoutX="396.0" layoutY="475.0" prefHeight="48.0" prefWidth="546.0" />
       <TextField fx:id="celularField" layoutX="422.0" layoutY="544.0" prefHeight="48.0" prefWidth="520.0" />
       <TextField fx:id="emailField" layoutX="1077.0" layoutY="475.0" prefHeight="48.0" prefWidth="556.0" />
-      <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5a39d2;" text="CANCELAR" textFill="WHITE">
+      <Button layoutX="677.0" layoutY="876.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="954.0" layoutY="878.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5a39d2;" text="SALVAR" textFill="WHITE">
+      <Button layoutX="954.0" layoutY="878.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="SALVAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
       <DatePicker fx:id="dataNascPicker" layoutX="1314.0" layoutY="544.0" prefHeight="48.0" prefWidth="317.0" />
-      <Text layoutX="978.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento">
+      <Text layoutX="965.0" layoutY="580.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="304.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:">
+      <Text layoutX="299.0" layoutY="646.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rua:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
       <TextField fx:id="ruaField" layoutX="403.0" layoutY="610.0" prefHeight="48.0" prefWidth="284.0" />
-      <Text layoutX="725.0" layoutY="717.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP:">
+      <Text layoutX="719.0" layoutY="717.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEP:">
          <font>
             <Font size="36.0" />
          </font>
@@ -127,13 +118,13 @@
          </font>
       </Text>
       <TextField fx:id="bairroField" layoutX="847.0" layoutY="610.0" prefHeight="48.0" prefWidth="284.0" />
-      <Text layoutX="1176.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:">
+      <Text layoutX="1166.0" layoutY="647.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cidade:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
       <TextField fx:id="cidadeField" layoutX="1314.0" layoutY="611.0" prefHeight="48.0" prefWidth="317.0" />
-      <Text layoutX="296.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
+      <Text layoutX="299.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estado:">
          <font>
             <Font size="36.0" />
          </font>
