@@ -127,6 +127,7 @@ public class ListaConsultasMedicoController {
         HBox card = new HBox();
         card.setSpacing(20);
         card.setStyle("-fx-padding: 15; -fx-border-color: #5A39D2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #F3F3F3;");
+        card.setOnMouseClicked(event -> handleEscreverProntuario(schedulingId)); // Add click event
 
         VBox details = new VBox();
         details.setSpacing(5);
@@ -144,6 +145,18 @@ public class ListaConsultasMedicoController {
 
         card.getChildren().add(details);
         vboxContainer.getChildren().add(card);
+    }
+
+    private void handleEscreverProntuario(int schedulingId) {
+        try {
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("/inodev/Médico/EscreverProntuario.fxml"));
+            Parent root = loader.load();
+            EscreverProntuarioController controller = loader.getController();
+            controller.setSchedulingId(schedulingId);
+            App.setRoot(root);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
