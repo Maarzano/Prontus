@@ -1,5 +1,6 @@
 package inodev;
 
+import inodev.controllers.AgendarConsultaController;
 import inodev.controllers.TelaPrincipalMedicoController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +25,9 @@ public class App extends Application {
     }
 
     public static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
+        Parent root = fxmlLoader.load();
+        scene.setRoot(root);
     }
 
     public static void setRoot(Parent root) {
@@ -33,7 +36,8 @@ public class App extends Application {
 
     public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
-        return fxmlLoader.load();
+        Parent root = fxmlLoader.load();
+        return root;
     }
 
     public static void redirectToRoleScreen(String role, int userId) throws IOException {

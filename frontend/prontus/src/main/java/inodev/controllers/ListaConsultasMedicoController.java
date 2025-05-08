@@ -31,13 +31,22 @@ public class ListaConsultasMedicoController {
 
     public void setUserId(int userId) {
         this.userId = userId;
+        atualizarTela();
+    }
+
+    @FXML
+    private void initialize() {
+        atualizarTela();
+    }
+
+    private void atualizarTela() {
+        vboxContainer.getChildren().clear();
         carregarConsultas();
     }
 
     private void carregarConsultas() {
         try {
-            // Fetch the doctor associated with the logged-in user
-            URL doctorUrl = new URL("http://localhost:8080/api/doctors");
+            URL doctorUrl = new URL("http://localhost:8080/api/doctors?userId=" + userId);
             HttpURLConnection doctorConn = (HttpURLConnection) doctorUrl.openConnection();
             doctorConn.setRequestMethod("GET");
 
@@ -47,34 +56,24 @@ public class ListaConsultasMedicoController {
                 reader.close();
 
                 JsonArray doctors = JsonParser.parseString(response).getAsJsonArray();
-                int doctorId = findDoctorIdByUserId(doctors, userId);
+                if (doctors.size() > 0) {
+                    JsonObject doctor = doctors.get(0).getAsJsonObject();
+                    int doctorId = doctor.get("id").getAsInt();
 
-                if (doctorId != -1) {
                     fetchConsultations(doctorId);
                 } else {
                     System.out.println("Nenhum médico encontrado para o userId: " + userId);
                 }
             } else {
-                System.out.println("Erro ao buscar médicos: " + doctorConn.getResponseCode());
+                System.out.println("Erro ao buscar informações do médico: " + doctorConn.getResponseCode());
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private int findDoctorIdByUserId(JsonArray doctors, int userId) {
-        for (JsonElement element : doctors) {
-            JsonObject doctor = element.getAsJsonObject();
-            if (doctor.get("userId").getAsInt() == userId) {
-                return doctor.get("id").getAsInt();
-            }
-        }
-        return -1; // Return -1 if no doctor is found for the given userId
-    }
-
     private void fetchConsultations(int doctorId) {
         try {
-            // Fetch consultations for the specific doctor
             URL url = new URL("http://localhost:8080/api/schedulings?doctorId=" + doctorId);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -127,6 +126,7 @@ public class ListaConsultasMedicoController {
         HBox card = new HBox();
         card.setSpacing(20);
         card.setStyle("-fx-padding: 15; -fx-border-color: #5A39D2; -fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #F3F3F3;");
+        card.setOnMouseClicked(event -> handleEscreverProntuario(schedulingId)); // Add click event
 
         VBox details = new VBox();
         details.setSpacing(5);
@@ -144,6 +144,18 @@ public class ListaConsultasMedicoController {
 
         card.getChildren().add(details);
         vboxContainer.getChildren().add(card);
+    }
+
+    private void handleEscreverProntuario(int schedulingId) {
+        try {
+            FXMLLoader loader = new FXMLLoader(App.class.getResource("/inodev/Médico/EscreverProntuario.fxml"));
+            Parent root = loader.load();
+            EscreverProntuarioController controller = loader.getController();
+            controller.setSchedulingId(schedulingId);
+            App.setRoot(root);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
