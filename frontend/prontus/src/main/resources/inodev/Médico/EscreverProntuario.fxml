@@ -61,13 +61,13 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <TextArea fx:id="receitaField" layoutX="445.0" layoutY="320.0" prefHeight="189.0" prefWidth="1078.0" />
+      <TextArea fx:id="recepieArea" layoutX="445.0" layoutY="320.0" prefHeight="189.0" prefWidth="1078.0" promptText="Receita" />
       <Text layoutX="222.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receita:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <TextArea fx:id="anotacoesField" layoutX="445.0" layoutY="561.0" prefHeight="243.0" prefWidth="1078.0" />
+      <TextArea fx:id="anotationArea" layoutX="445.0" layoutY="561.0" prefHeight="243.0" prefWidth="1078.0" promptText="Anotações" />
       <Text layoutX="222.0" layoutY="593.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Anotações:">
          <font>
             <Font size="36.0" />
@@ -78,6 +78,6 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <ComboBox fx:id="diagnosticoComboBox" layoutX="445.0" layoutY="856.0" prefHeight="40.0" prefWidth="364.0" />
+      <ComboBox fx:id="diagnosticField" layoutX="445.0" layoutY="856.0" prefHeight="40.0" prefWidth="364.0" promptText="Selecione o diagnóstico" />
    </children>
 </Pane>
