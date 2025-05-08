@@ -31,12 +31,22 @@ public class ListaConsultasMedicoController {
 
     public void setUserId(int userId) {
         this.userId = userId;
+        atualizarTela();
+    }
+
+    @FXML
+    private void initialize() {
+        atualizarTela();
+    }
+
+    private void atualizarTela() {
+        vboxContainer.getChildren().clear();
         carregarConsultas();
     }
 
     private void carregarConsultas() {
         try {
-            URL doctorUrl = new URL("http://localhost:8080/api/doctors");
+            URL doctorUrl = new URL("http://localhost:8080/api/doctors?userId=" + userId);
             HttpURLConnection doctorConn = (HttpURLConnection) doctorUrl.openConnection();
             doctorConn.setRequestMethod("GET");
 
@@ -46,29 +56,20 @@ public class ListaConsultasMedicoController {
                 reader.close();
 
                 JsonArray doctors = JsonParser.parseString(response).getAsJsonArray();
-                int doctorId = findDoctorIdByUserId(doctors, userId);
+                if (doctors.size() > 0) {
+                    JsonObject doctor = doctors.get(0).getAsJsonObject();
+                    int doctorId = doctor.get("id").getAsInt();
 
-                if (doctorId != -1) {
                     fetchConsultations(doctorId);
                 } else {
                     System.out.println("Nenhum médico encontrado para o userId: " + userId);
                 }
             } else {
-                System.out.println("Erro ao buscar médicos: " + doctorConn.getResponseCode());
+                System.out.println("Erro ao buscar informações do médico: " + doctorConn.getResponseCode());
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private int findDoctorIdByUserId(JsonArray doctors, int userId) {
-        for (JsonElement element : doctors) {
-            JsonObject doctor = element.getAsJsonObject();
-            if (doctor.get("userId").getAsInt() == userId) {
-                return doctor.get("id").getAsInt();
-            }
-        }
-        return -1;
     }
 
     private void fetchConsultations(int doctorId) {

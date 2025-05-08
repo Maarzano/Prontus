@@ -39,6 +39,14 @@ public class AgendarConsultaController {
         carregarMedicos();
         carregarPacientes();
     }
+    
+    public void atualizarDados() {
+        doctorComboBox.getItems().clear();
+        patientComboBox.getItems().clear();
+        carregarMedicos();
+        carregarPacientes();
+    }
+    
 
     private void carregarMedicos() {
         try {
