@@ -50,12 +50,12 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Text>
-      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0" style="-fx-background-radius: 20; -fx-background-color: #5a39d2;" text="Voltar" textFill="WHITE">
+      <Button fx:id="btnSair" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Voltar" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="1440.0" layoutY="960.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="58.0" prefWidth="207.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="SALVAR" textFill="WHITE">
+      <Button layoutX="1400.0" layoutY="890.0" mnemonicParsing="false" onAction="#handleSalvar" prefHeight="58.0" prefWidth="207.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="SALVAR" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
