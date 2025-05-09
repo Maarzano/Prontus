@@ -15,10 +15,10 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.LoginController">
    <children>
       <!-- Header -->
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0">
                <stops>

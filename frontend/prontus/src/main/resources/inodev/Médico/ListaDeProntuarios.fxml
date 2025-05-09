@@ -13,11 +13,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListaProntuariosController">
+<Pane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListaProntuariosController">
     <children>
 
         <!-- Cabeçalho -->
-        <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1900.0">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0">
             <fill>
                 <LinearGradient endX="1.0" endY="1.0">
                     <stops>
