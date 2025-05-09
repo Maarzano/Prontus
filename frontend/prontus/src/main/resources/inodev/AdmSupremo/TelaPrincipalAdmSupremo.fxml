@@ -75,7 +75,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Text layoutX="665.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para ver a lista de Administradores">
+      <Text layoutX="644.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para ver a lista de Administradores">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
