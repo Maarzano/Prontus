@@ -17,7 +17,7 @@
     <children>
 
         <!-- Cabeçalho -->
-        <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" width="1900.0">
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="140.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1900.0">
             <fill>
                 <LinearGradient endX="1.0" endY="1.0">
                     <stops>
