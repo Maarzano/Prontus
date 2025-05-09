@@ -67,11 +67,5 @@
             </VBox>
          </content>
       </ScrollPane>
-      <ImageView fitHeight="88.0" fitWidth="93.0" layoutX="46.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagens/image-removebg-preview%20(3).png" />
-         </image>
-      </ImageView>
-      <Separator layoutX="370.0" layoutY="23.0" orientation="VERTICAL" prefHeight="101.0" prefWidth="2.0" />
    </children>
 </Pane>
