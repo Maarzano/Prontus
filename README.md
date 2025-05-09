@@ -62,47 +62,77 @@
 
 ## Sobre o projeto
 
-O Sistema de Clínica Médica - Marzano é uma aplicação desenvolvida para otimizar a rotina de clínicas e consultórios médicos, centralizando o controle de pacientes, médicos e agendamentos em um só lugar. A ferramenta resolve problemas comuns de gestão, como erros de marcação, prontuários desorganizados e dificuldade no acesso a informações. Com funcionalidades como cadastro de pacientes e médicos, agenda com horários disponíveis, prontuário eletrônico e geração de relatórios, o sistema atende especialmente clínicas de pequeno e médio porte que buscam mais eficiência e organização no dia a dia.
+O Sistema de Clínica Médica da Prontus é uma aplicação desenvolvida para otimizar a rotina de clínicas e consultórios médicos, centralizando o controle de pacientes, médicos e agendamentos em um só lugar. A ferramenta resolve problemas comuns de gestão, como erros de marcação, prontuários desorganizados e dificuldade no acesso a informações. Com funcionalidades como cadastro de pacientes e médicos, agenda com horários disponíveis e prontuário eletrônico, o sistema atende especialmente clínicas de pequeno e médio porte que buscam mais eficiência e organização no dia a dia.
 
+### 🛠 Tecnologias Utilizadas 
 
+[![Java][Java.dev]][Java-url] [![MySQL][MySQL.dev]][MySQL-url] [![Spring][Spring.dev]][Spring-url]
 
+[![Swagger][Swagger.dev]][Swagger-url] [![Scene Builder][Scene.dev]][Scene-url]
 
-
-### 🛠 Tecnologias Utilizadas
-
-* [![Java][Java.dev]][Java-url]
-* [![MySQL][MySQL.dev]][MySQL-url]
-* [![Spring][Spring.dev]][Spring-url]
-* [![Swagger][Swagger.dev]][Swagger-url]
-* Adicionar `Scene builder`
-
-
- * Gerenciador de Pacotes: npm <br>
-* Controle de Versão: Git <br>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
-## 🏗 Arquitetura do Projeto
 
-<h5> Explique a estrutura do projeto, como os arquivos e pastas estão organizados e a responsabilidade de cada componente. <br>
-<p> </p>
 
-![alt text](image.png)
+## 👥 Estrutura da Equipe e Divisão de Tarefas
+O projeto foi desenvolvido por uma equipe de 6 pessoas, divididas entre as áreas de back-end e front-end. A divisão de tarefas foi organizada da seguinte forma:
+
+### 🔧 Back-end
+Desenvolvimento da API REST com Java e Spring.
+
+Implementação do cadastro e autenticação de usuários (médicos e pacientes).
+
+Lógica de agendamento de consultas e prevenção de conflitos de horário.
+
+Criação e manipulação de prontuário eletrônico.
+
+Integração com banco de dados MySQL.
+
+Documentação dos endpoints utilizando Swagger.
+
+
+### 🎨 Front-end
+Construção das telas de login, cadastro e navegação principal utilizando JavaFX e Scene Builder.
+
+Implementação da interface da agenda para marcação e visualização de horários disponíveis.
+
+Desenvolvimento das telas de visualização e edição de prontuários médicos.
+
+Integração da interface com os serviços da API back-end.
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
-
 
  ## 🔄 Workflow de Desenvolvimento
  
- Descreva como o desenvolvimento foi organizado, incluindo o uso de branches, práticas de merge e ferramentas de colaboração.
+Integração Contínua com GitHub Actions
+Para garantir qualidade, organização e automação no fluxo de desenvolvimento, o repositório conta com configurações de GitHub Actions aplicadas às branches principais de desenvolvimento.
 
-Branch Principal: main <br>
+Geração automática de Pull Requests
+As branches back e front possuem workflows configurados da seguinte forma:
 
-Branches de Funcionalidade: Criadas para cada nova funcionalidade ou correção. <br>
+Sempre que um push é realizado em back ou front, uma GitHub Action é executada automaticamente.
 
-Pull Requests: Utilizados para revisão de código antes de mesclar com a branch principal. <br>
+Essa action cria um Pull Request (PR) direcionado para a branch dev, facilitando a integração contínua entre os módulos de front-end e back-end.
 
-Commits: Mensagens claras e descritivas seguindo o padrão convencional. <br>
+Sorteio automático de revisores
+Para manter a qualidade do código e incentivar a colaboração entre a equipe, outro GitHub Action é responsável por:
+
+Sortear automaticamente 2 revisores dentre os participantes do repositório assim que um novo PR é aberto para a branch dev.
+
+O merge do PR na branch dev só é permitido após a aprovação de pelo menos 1 dos revisores sorteados.
+
+<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
+
+## 🌿 Estrutura de Branches
+
+O projeto é versionado por meio de uma organização clara de branches:
+
+- back – Contém toda a lógica e estrutura do back-end.
+- front – Responsável pelo desenvolvimento da interface e interações do front-end.
+- doc – Branch dedicada à documentação técnica e funcional do projeto.
+- dev – Ambiente de integração onde o front-end, back-end e documentação são unificados.
+- main – Branch final, usada para o deploy e transição dos dados do projeto finalizado.
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
@@ -289,3 +319,7 @@ Project Link: [https://github.com/Maarzano/oBoticario-db](https://github.com/Maa
 
 [Spring.dev]: https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white
 [Spring-url]: https://spring.io/projects/spring-boot
+
+
+[Scene.dev]: https://img.shields.io/badge/JavaFX%20Scene%20Builder-007396?style=for-the-badge&logo=java&logoColor=white
+[Scene-url]: https://gluonhq.com/products/scene-builder/
