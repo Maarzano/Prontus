@@ -23,7 +23,7 @@ public class ListaProntuariosController {
     private VBox vboxContainer;
 
     @FXML
-    private Button btnVoltar;
+    private Button btnVolta;
 
     @FXML
     private void initialize() {
@@ -99,9 +99,9 @@ public class ListaProntuariosController {
     }
 
     @FXML
-    private void handleVoltar() {
+    private void handleVolta() {
         try {
-            App.setRoot("Medico/TelaPrincipalMedico");
+            App.setRoot("Médico/TelaPrincipalMedico");
         } catch (Exception e) {
             e.printStackTrace();
         }
