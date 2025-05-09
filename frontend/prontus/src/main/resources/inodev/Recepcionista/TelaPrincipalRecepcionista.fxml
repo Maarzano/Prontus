@@ -92,12 +92,12 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="1203.0" layoutY="805.0" mnemonicParsing="false" onAction="#handleVerListaPacientes" prefHeight="40.0" prefWidth="154.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="LISTA" textFill="WHITE">
+      <Button layoutX="1199.0" layoutY="805.0" mnemonicParsing="false" onAction="#handleVerListaPacientes" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="LISTA" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="1205.0" layoutY="669.0" mnemonicParsing="false" onAction="#handleAgendarConsulta" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="AGENDAR" textFill="WHITE">
+      <Button layoutX="1199.0" layoutY="669.0" mnemonicParsing="false" onAction="#handleAgendarConsulta" prefHeight="40.0" prefWidth="164.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="AGENDAR" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

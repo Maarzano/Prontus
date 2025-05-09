@@ -51,34 +51,34 @@
          </font>
       </Text>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="448.0" layoutX="239.0" layoutY="316.0" stroke="BLACK" strokeType="INSIDE" width="1488.0" />
-      <TextField fx:id="nomeField" layoutX="483.0" layoutY="363.0" prefHeight="49.0" prefWidth="1037.0">
+      <TextField fx:id="nomeField" layoutX="534.0" layoutY="363.0" prefHeight="49.0" prefWidth="910.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="cpfField" layoutX="483.0" layoutY="429.0" prefHeight="44.0" prefWidth="1037.0">
+      <TextField fx:id="cpfField" layoutX="406.0" layoutY="429.0" prefHeight="44.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="celularField" layoutX="483.0" layoutY="488.0" prefHeight="39.0" prefWidth="1037.0">
+      <TextField fx:id="celularField" layoutX="406.0" layoutY="488.0" prefHeight="48.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="emailField" layoutX="483.0" layoutY="555.0" prefHeight="49.0" prefWidth="1037.0">
+      <TextField fx:id="emailField" layoutX="406.0" layoutY="555.0" prefHeight="49.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <PasswordField fx:id="senhaField" layoutX="483.0" layoutY="624.0" prefHeight="39.0" prefWidth="1037.0">
+      <PasswordField fx:id="senhaField" layoutX="406.0" layoutY="624.0" prefHeight="39.0" prefWidth="1037.0">
          <font>
             <Font size="18.0" />
          </font>
       </PasswordField>
-      <Text layoutX="250.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:" wrappingWidth="199.916015625">
+      <Text layoutX="251.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo:" wrappingWidth="273.24932861328125">
          <font>
-            <Font size="29.0" />
+            <Font size="36.0" />
          </font>
       </Text>
       <Text layoutX="251.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:">
@@ -86,17 +86,17 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="251.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+      <Text layoutX="251.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="245.0" layoutY="658.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+      <Text layoutX="251.0" layoutY="652.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="251.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
+      <Text layoutX="251.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Celular:">
          <font>
             <Font size="36.0" />
          </font>

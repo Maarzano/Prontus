@@ -75,7 +75,7 @@
       </Text>
       <TextField fx:id="nomeField" layoutX="589.0" layoutY="408.0" prefHeight="48.0" prefWidth="1044.0" />
       <TextField fx:id="cpfField" layoutX="396.0" layoutY="475.0" prefHeight="48.0" prefWidth="546.0" />
-      <TextField fx:id="celularField" layoutX="422.0" layoutY="544.0" prefHeight="48.0" prefWidth="520.0" />
+      <TextField fx:id="celularField" layoutX="430.0" layoutY="544.0" prefHeight="48.0" prefWidth="512.0" />
       <TextField fx:id="emailField" layoutX="1077.0" layoutY="475.0" prefHeight="48.0" prefWidth="556.0" />
       <Button layoutX="729.0" layoutY="874.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="70.0" prefWidth="246.0" style="-fx-background-color: #5a39d2; -fx-background-radius: 20;" text="CANCELAR" textFill="WHITE">
          <font>
@@ -104,7 +104,7 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <TextField fx:id="cepField" layoutX="812.0" layoutY="681.0" prefHeight="48.0" prefWidth="317.0" />
+      <TextField fx:id="cepField" layoutX="814.0" layoutY="681.0" prefHeight="48.0" prefWidth="317.0" />
       <Text layoutX="1166.0" layoutY="716.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero:">
          <font>
             <Font size="36.0" />
