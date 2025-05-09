@@ -9,14 +9,11 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="inodev.controllers.ListaProntuariosController"
-      prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;">
+<Pane prefHeight="1080.0" prefWidth="1900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inodev.controllers.ListaProntuariosController">
     <children>
 
         <!-- Cabeçalho -->
@@ -48,17 +45,12 @@
                 <Font name="System Bold" size="48.0" />
             </font>
         </Text>
-        <Text fill="WHITE" layoutX="755.0" layoutY="88.0"
-              style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);"
-              text="Lista de Prontuários">
+        <Text fill="WHITE" layoutX="755.0" layoutY="88.0" style="-fx-font-weight: bold;" text="Lista de Prontuários">
             <font>
                 <Font name="System Bold" size="48.0" />
             </font>
         </Text>
-        <Button fx:id="btnVoltar" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false"
-                onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0"
-                style="-fx-background-color: #5A39D2; -fx-background-radius: 20;"
-                text="Voltar" textFill="WHITE">
+        <Button fx:id="btnVoltar" layoutX="1638.0" layoutY="41.0" mnemonicParsing="false" onAction="#handleVoltar" prefHeight="53.0" prefWidth="220.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="Voltar" textFill="WHITE">
             <font>
                 <Font size="18.0" />
             </font>

@@ -46,7 +46,7 @@
          </font>
       </Text>
       <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
-      <Text fill="WHITE" layoutX="855.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Lista de Usuários">
+      <Text fill="WHITE" layoutX="855.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Lista de Usuários">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
@@ -65,6 +65,5 @@
             </VBox>
          </content>
       </ScrollPane>
-      <Line endX="-96.0" endY="-44.0" layoutX="468.0" layoutY="64.0" startX="-96.0" startY="50.0" stroke="WHITE" />
    </children>
 </Pane>
