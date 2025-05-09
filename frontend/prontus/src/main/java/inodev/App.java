@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,6 +22,8 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("Login"), 1920, 1005);
         stage.setScene(scene);
+        stage.setTitle("Prontus");
+        stage.getIcons().add(new Image(App.class.getResourceAsStream("/inodev/imagens/logoProntus.png")));
         stage.show();
     }
 
