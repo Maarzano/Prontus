@@ -29,4 +29,14 @@ public class TelaPrincipalMedicoController {
         controller.setUserId(userId);
         App.setRoot(root);
     }
+
+    @FXML
+    public void handleVerListaProntuarios(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("/inodev/Médico/ListaDeProntuarios.fxml"));
+        Parent root = loader.load();
+        ListaProntuariosController controller = loader.getController();
+        controller.setUserId(userId);
+        App.setRoot(root);
+    }
+
 }
