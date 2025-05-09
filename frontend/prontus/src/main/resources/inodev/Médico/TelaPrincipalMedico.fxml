@@ -44,7 +44,7 @@
          </font>
       </Text>
       <Line endX="-10.0" endY="-19.0" layoutX="380.0" layoutY="51.0" startX="-10.0" startY="59.0" stroke="WHITE" />
-      <Text fill="WHITE" layoutX="897.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold; -fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" text="Médico">
+      <Text fill="WHITE" layoutX="897.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Médico">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
@@ -54,7 +54,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="#5a39d2" layoutX="553.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2); -fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA PRONTUS  " wrappingWidth="837.681640625">
+      <Text fill="#5a39d2" layoutX="558.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: BOLD;" text="BEM VINDO AO SISTEMA PRONTUS  " wrappingWidth="837.681640625">
          <font>
             <Font size="48.0" />
          </font>
@@ -74,7 +74,22 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="CONSULTAS" textFill="WHITE" onAction="#handleVerConsultas">
+      <Button layoutX="1205.0" layoutY="474.0" mnemonicParsing="false" onAction="#handleVerConsultas" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="CONSULTAS" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Rectangle fill="WHITE" height="102.0" layoutX="552.0" layoutY="571.0" stroke="BLACK" strokeType="INSIDE" style="-fx-effect: dropshadow(gaussian, black, 5, 0.3, 2, 2);" width="832.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Rectangle>
+      <Text layoutX="672.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clique aqui para ver a lista de prontuários">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button layoutX="1205.0" layoutY="606.0" mnemonicParsing="false" onAction="#handleVerListaProntuarios" prefHeight="40.0" prefWidth="156.0" style="-fx-background-color: #5A39D2; -fx-background-radius: 20;" text="LISTA" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

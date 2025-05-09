@@ -58,12 +58,21 @@ public class EscreverProntuarioController {
                 writer.write(medicalRecordJson);
             }
 
-            if (medicalRecordConn.getResponseCode() == 201) {
+            int responseCode = medicalRecordConn.getResponseCode();
+            if (responseCode == 201) {
                 showAlert("Sucesso", "Prontuário salvo com sucesso!");
                 App.setRoot("Médico/ListaConsultasMedico");
             } else {
-                throw new Exception("Erro ao criar prontuário.");
+                BufferedReader reader = new BufferedReader(new InputStreamReader(medicalRecordConn.getErrorStream()));
+                StringBuilder errorMessage = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    errorMessage.append(line);
+                }
+                reader.close();
+                throw new Exception("Erro ao criar prontuário: " + errorMessage.toString());
             }
+
         } catch (Exception e) {
             e.printStackTrace();
             showAlert("Erro", "Ocorreu um erro ao salvar o prontuário.");
