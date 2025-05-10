@@ -74,95 +74,160 @@ O Sistema de Clínica Médica da Prontus é uma aplicação desenvolvida para ot
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
 
+## 🔄 Workflow de Trabalho (Git, GitHub, Merge de Branches)
 
-## 👥 Estrutura da Equipe e Divisão de Tarefas
-O projeto foi desenvolvido por uma equipe de 6 pessoas, divididas entre as áreas de back-end e front-end. A divisão de tarefas foi organizada da seguinte forma:
+Durante o desenvolvimento do projeto, utilizamos o **Git** como sistema de versionamento e o **GitHub** como plataforma de colaboração em equipe. A equipe era composta por 6 integrantes, distribuídos entre as áreas de front-end, back-end e documentação.
 
-### 🔧 Back-end
-Desenvolvimento da API REST com Java e Spring.
+#### 🛠️ Uso do Git para Versionamento
 
-Implementação do cadastro e autenticação de usuários (médicos e pacientes).
+Cada integrante manteve o controle das suas alterações localmente com o Git, utilizando commits frequentes e descritivos para facilitar o rastreamento do histórico do projeto. O versionamento seguiu uma lógica de separação clara por área de atuação, evitando conflitos e promovendo um fluxo de trabalho organizado.
 
-Lógica de agendamento de consultas e prevenção de conflitos de horário.
+#### 🌿 Criação e Fusão de Branches
 
-Criação e manipulação de prontuário eletrônico.
+Adotamos um modelo baseado em múltiplas branches especializadas, com a seguinte estrutura:
 
-Integração com banco de dados MySQL.
+- `main`: branch principal, que recebeu apenas a versão final e consolidada do projeto.
+- `dev`: utilizada para integrar o front-end com o back-end e realizar os testes de integração.
+- `front`: utilizada pelas 3 pessoas responsáveis pelo desenvolvimento do front-end.
+- `back`: utilizada pelas 3 pessoas responsáveis pelo desenvolvimento do back-end.
+- `doc`: utilizada por 2 membros (um do front e um do back) para elaborar a documentação.
 
-Documentação dos endpoints utilizando Swagger.
+Cada integrante fazia *push* diretamente na branch correspondente à sua área (ex: `front`, `back`, `doc`). Após o desenvolvimento inicial, a branch `dev` foi utilizada como ponto de integração entre o front-end e o back-end. Quando todas as partes estavam finalizadas e testadas, um único *merge* foi feito da `dev` para a `main`, concluindo o projeto.
 
+#### 🔁 Pull Requests e Code Review
 
-### 🎨 Front-end
-Construção das telas de login, cadastro e navegação principal utilizando JavaFX e Scene Builder.
+Todas as contribuições passavam por **pull requests** (PRs) no GitHub. Para manter a qualidade e o controle do código, duas pessoas eram **sorteadas aleatoriamente** a cada PR para revisar e aprovar a solicitação antes do merge. Esse processo garantiu que o código fosse verificado por diferentes membros da equipe, promovendo aprendizado mútuo e melhorando a padronização do código.
 
-Implementação da interface da agenda para marcação e visualização de horários disponíveis.
+### 🔄 Workflow de Desenvolvimento
 
-Desenvolvimento das telas de visualização e edição de prontuários médicos.
+#### Integração Contínua com GitHub Actions
 
-Integração da interface com os serviços da API back-end.
+Para garantir qualidade, organização e automação no fluxo de desenvolvimento, o repositório conta com configurações de **GitHub Actions** aplicadas às branches principais de desenvolvimento.
 
-<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
+#### Geração Automática de Pull Requests
 
- ## 🔄 Workflow de Desenvolvimento
- 
-Integração Contínua com GitHub Actions
-Para garantir qualidade, organização e automação no fluxo de desenvolvimento, o repositório conta com configurações de GitHub Actions aplicadas às branches principais de desenvolvimento.
+As branches `back` e `front` possuem workflows configurados da seguinte forma:
 
-Geração automática de Pull Requests
-As branches back e front possuem workflows configurados da seguinte forma:
+- Sempre que um push é realizado em `back` ou `front`, uma GitHub Action é executada automaticamente.
+- Essa action cria um Pull Request (PR) direcionado para a branch `dev`, facilitando a integração contínua entre os módulos de front-end e back-end.
 
-Sempre que um push é realizado em back ou front, uma GitHub Action é executada automaticamente.
+#### Sorteio Automático de Revisores
 
-Essa action cria um Pull Request (PR) direcionado para a branch dev, facilitando a integração contínua entre os módulos de front-end e back-end.
-
-Sorteio automático de revisores
 Para manter a qualidade do código e incentivar a colaboração entre a equipe, outro GitHub Action é responsável por:
 
-Sortear automaticamente 2 revisores dentre os participantes do repositório assim que um novo PR é aberto para a branch dev.
-
-O merge do PR na branch dev só é permitido após a aprovação de pelo menos 1 dos revisores sorteados.
+- Sortear automaticamente **2 revisores** dentre os participantes do repositório assim que um novo PR é aberto para a branch `dev`.
+- O merge do PR na branch `dev` só é permitido após a aprovação de **pelo menos 1** dos revisores sorteados.
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
-## 🌿 Estrutura de Branches
+---
+
+### 🔧 Back-end Verificar!!!!
+
+- Desenvolvimento da API REST com Java e Spring.
+- Implementação do cadastro e autenticação de usuários (médicos e pacientes).
+- Lógica de agendamento de consultas e prevenção de conflitos de horário.
+- Criação e manipulação de prontuário eletrônico.
+- Integração com banco de dados MySQL.
+- Documentação dos endpoints utilizando Swagger.
+
+---
+
+### 🎨 Front-end Verificar!!!!
+
+- Construção das telas de login, cadastro e navegação principal utilizando JavaFX e Scene Builder.
+- Implementação da interface da agenda para marcação e visualização de horários disponíveis.
+- Desenvolvimento das telas de visualização e edição de prontuários médicos.
+- Integração da interface com os serviços da API back-end.
+
+---
+
+### 🌿 Estrutura de Branches
 
 O projeto é versionado por meio de uma organização clara de branches:
 
-- back – Contém toda a lógica e estrutura do back-end.
-- front – Responsável pelo desenvolvimento da interface e interações do front-end.
-- doc – Branch dedicada à documentação técnica e funcional do projeto.
-- dev – Ambiente de integração onde o front-end, back-end e documentação são unificados.
-- main – Branch final, usada para o deploy e transição dos dados do projeto finalizado.
+- `back` – Contém toda a lógica e estrutura do back-end.
+- `front` – Responsável pelo desenvolvimento da interface e interações do front-end.
+- `doc` – Branch dedicada à documentação técnica e funcional do projeto.
+- `dev` – Ambiente de integração onde o front-end, back-end e documentação são unificados.
+- `main` – Branch final, usada para o deploy e transição dos dados do projeto finalizado.
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
 
 <!-- Inicio -->
-##  🤔 Como começar?
 
-Se você quer rodar este projeto na sua máquina, não se preocupe o processo é simples! Abaixo você encontra um passo a passo claro para configurar tudo no seu ambiente local sem complicações.
+## 📘 Manual do Usuário
 
-### Pre-requisitos
-
-💻 Sistema Operacional
-- Windows 10 ou Windows 11
-
-🛠️ Ferramentas de Desenvolvimento
-- Visual Studio Code – Versão mais recente
-
-  - Extensão: Java Extension Pack (fornece suporte completo ao desenvolvimento em Java)
-
-- Java JDK – Versão compatível com o Spring Boot (recomenda-se JDK 17 ou superior)
-
-- Spring Boot – Framework principal do projeto (última versão estável)
-
-- MySQL – Sistema gerenciador de banco de dados relacional
-
-  - Recomendado: MySQL Workbench para administração visual
-
-- Swagger – Para documentação e testes da API REST
+Este manual tem como objetivo orientar os funcionários do hospital sobre como utilizar o sistema de forma prática e eficiente. O sistema foi desenvolvido para facilitar o gerenciamento de cadastros, consultas e prontuários médicos, por meio de uma interface simples e intuitiva.
 
 
+
+### 👥 Perfis de Usuário
+
+O sistema possui quatro tipos de usuários, cada um com permissões específicas:
+
+- **ADM_SUPER**: responsável pela gestão de outros administradores.
+- **ADM**: responsável pelo cadastro e gestão de médicos e recepcionistas.
+- **RECEPCIONISTA**: responsável pelo cadastro de pacientes e agendamento de consultas.
+- **DOCTOR (Médico)**: responsável pelo atendimento e preenchimento de prontuários.
+
+---
+
+### 🔐 Acesso ao Sistema
+
+Todos os perfis iniciam o uso do sistema acessando a tela de **Login** com seu usuário e senha cadastrados. Após o login, cada usuário será direcionado para a tela correspondente ao seu perfil.
+
+
+
+### 🧑‍💼 ADM_SUPER – Administrador Geral
+
+**Funcionalidades disponíveis:**
+
+1. Acessar a **tela de login**.
+2. Tela inicial **lista de ações que pode realizar**.
+3. Cadastrar novos **administradores (ADM)**.
+4. Visualizar a **lista de administradores já cadastrados**.
+
+---
+
+### 🧑‍💼 ADM – Administrador
+
+**Funcionalidades disponíveis:**
+
+1. Acessar a **tela de login**.
+2. Tela inicial **lista de ações que pode realizar**.
+3. Cadastrar novos **médicos**.
+4. Cadastrar novos **recepcionistas**.
+5. Visualizar a **lista de médicos cadastrados/lista de recepcionistas cadastrados**.
+
+---
+
+### 🧑‍💼 RECEPCIONISTA
+
+**Funcionalidades disponíveis:**
+
+1. Acessar a **tela de login**.
+2. Tela inicial **lista de ações que pode realizar**.
+3. Cadastrar **novos pacientes**.
+4. Visualizar a **lista de pacientes cadastrados**.
+5. Acessar a aba de **agendamento de consultas**.
+6. Verificar a **lista de consultas agendadas**.
+
+---
+
+### 🩺 DOCTOR – Médico
+
+**Funcionalidades disponíveis:**
+
+1. Acessar a **tela de login**.
+2. Tela inicial **lista de ações que pode realizar**.
+3. Acessar a **aba de Consultas** para ver sua agenda de atendimentos.
+4. Acessar e preencher a **ficha de prontuário** dos pacientes.
+
+<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
+
+---
 
 ### Instalação
 
