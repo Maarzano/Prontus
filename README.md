@@ -117,7 +117,7 @@ Para manter a qualidade do código e incentivar a colaboração entre a equipe, 
 
 ---
 
-### 🔧 Back-end Verificar!!!!
+### 🔧 Back-end
 
 - Desenvolvimento da API REST com Java e Spring.
 - Implementação do cadastro e autenticação de usuários (médicos e pacientes).
@@ -128,7 +128,7 @@ Para manter a qualidade do código e incentivar a colaboração entre a equipe, 
 
 ---
 
-### 🎨 Front-end Verificar!!!!
+### 🎨 Front-end
 
 - Construção das telas de login, cadastro e navegação principal utilizando JavaFX e Scene Builder.
 - Implementação da interface da agenda para marcação e visualização de horários disponíveis.
@@ -334,8 +334,8 @@ A colaboração entre as diferentes áreas foi essencial para transformar ideias
 
 ### Desenvolvedores:
 
-<a href="https://github.com/Maarzano/oBoticario-db/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Maarzano/oBoticario-db" />
+<a href="https://github.com/Maarzano/Prontus/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Maarzano/Prontus" />
 </a>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
