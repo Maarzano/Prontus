@@ -363,7 +363,7 @@ Arthur Araújo - [@marzan.0](https://www.instagram.com/marzan.0/) - arthuramarza
 
 Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/) - alves2araujo@gmail.com
 
-Bernardo Braga - [@bragaxz9](https://www.instagram.com/bragaxz9/) - bragabernado454@gmail.com
+Bernardo Braga - [@bragaxz9](https://www.instagram.com/bragaxz9/) - bragabernardo454@gmail.com
 
 Isaac Adrian - [@isaac_souzzz](https://www.instagram.com/isaac_souzzz/) - isaacadriandesouza@gmail.com
 
