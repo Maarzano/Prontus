@@ -11,10 +11,9 @@
 <br />
 <div align="center">
 <a href="https://github.com/github_username/REPO">
-    <img src="imagens/PRONTUS.jpg" alt="Logo" width="240" height="200">
+    <img src="imagens/logoProntus.png" alt="Logo" width="300" height="300">
   </a>
 
-<h3 align="center">Prontus</h3>
 
   <p align="center">
     <br />
@@ -362,13 +361,13 @@ Gabriel Arthur - [@gbriel.js](https://www.instagram.com/gbriel.js/) - gbl48287@g
 
 Arthur Araújo - [@marzan.0](https://www.instagram.com/marzan.0/) - arthuramarzano10@gmail.com
 
-Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/)
+Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/) - alves2araujo@gmail.com
 
-Bernardo Braga - [@bragaxz9](https://www.instagram.com/bragaxz9/)
+Bernardo Braga - [@bragaxz9](https://www.instagram.com/bragaxz9/) - bragabernado454@gmail.com
 
-Isaac Adrian - [@isaac_souzzz](https://www.instagram.com/isaac_souzzz/)
+Isaac Adrian - [@isaac_souzzz](https://www.instagram.com/isaac_souzzz/) - isaacadriandesouza@gmail.com
 
-João Lucas - [@joaolucasgym](https://www.instagram.com/joaolucasgym/)
+João Lucas - [@joaolucasgym](https://www.instagram.com/joaolucasgym/) - joaolucascosta32@gmail.com
 
 Project Link: [https://github.com/Maarzano/Prontus](https://github.com/Maarzano/Prontus)
 
