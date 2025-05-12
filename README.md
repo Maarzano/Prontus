@@ -11,11 +11,8 @@
 <br />
 <div align="center">
 <a href="https://github.com/github_username/REPO">
-    <img src="imagens/PRONTUS.jpg" alt="Logo" width="240" height="200">
+    <img src="imagens/logoProntus.png" alt="Logo" width="300" height="300">
   </a>
-
-<h3 align="center">Prontus</h3>
-
   <p align="center">
     <br />
   </p>
@@ -31,13 +28,22 @@
       <a href="#sobre-o-projeto">Sobre o projeto</a>
     </li>
     <li>
-      <a href="#-arquitetura-do-projeto">Arquitetura do Projeto</a>
+      <a href="#-workflow-de-trabalho-git-github-merge-de-branches">Workflow de Trabalho</a>
     </li>
     <li>
-      <a href="#-workflow-de-desenvolvimento">Workflow de Desenvolvimento</a>
+      <a href="#-back-end">Back-end</a>
     </li>
     <li>
-      <a href="#historico-de-alterações">Historico de alterações</a>
+      <a href="#-front-end">Front-end</a>
+    </li>
+    <li>
+      <a href="#-manual-do-usuário">Manual do Usuario</a>
+    </li>
+    <li>
+      <a href="#-como-executar-o-projeto">Como executar o projeto</a>
+    </li>
+    <li>
+      <a href="#-contribuições">Contribuições</a>
     </li>
     <li>
       <a href="#integrantes">Integrantes</a>
@@ -117,7 +123,7 @@ Para manter a qualidade do código e incentivar a colaboração entre a equipe, 
 
 ---
 
-### 🔧 Back-end Verificar!!!!
+### 🔧 Back-end
 
 - Desenvolvimento da API REST com Java e Spring.
 - Implementação do cadastro e autenticação de usuários (médicos e pacientes).
@@ -128,7 +134,7 @@ Para manter a qualidade do código e incentivar a colaboração entre a equipe, 
 
 ---
 
-### 🎨 Front-end Verificar!!!!
+### 🎨 Front-end
 
 - Construção das telas de login, cadastro e navegação principal utilizando JavaFX e Scene Builder.
 - Implementação da interface da agenda para marcação e visualização de horários disponíveis.
@@ -256,7 +262,6 @@ Para trabalhar com Java no VS Code, é necessário instalar o pacote `Extension 
 4. Alternativamente, abra o VS Code, vá até o ícone de extensões e pesquise por **"Extension Pack for Java"**:  
    ![pesquisar extensão](imagens/image-5.png)
 
----
 
 ## ✅ Requisitos Técnicos
 
@@ -271,7 +276,7 @@ Para trabalhar com Java no VS Code, é necessário instalar o pacote `Extension 
 - **PostgreSQL** (recomendado – versão 13+)
   - Configure um banco e ajuste os dados de conexão em `backend/Prontus/src/main/resources/application.properties`.
 
----
+
 
 ## Rodando o Projeto
 Siga os passos abaixo para rodar o projeto Prontus na sua máquina:
@@ -345,7 +350,7 @@ A colaboração entre as diferentes áreas foi essencial para transformar ideias
 ### Desenvolvedores:
 
 <a href="https://github.com/Maarzano/oBoticario-db/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Maarzano/oBoticario-db" />
+  <img src="https://contrib.rocks/image?repo=Maarzano/Prontus" />
 </a>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
