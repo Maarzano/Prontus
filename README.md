@@ -1,14 +1,9 @@
 <a id="readme-top"></a>
 <!--
-*** Obrigado por visitar este repositório de alterações no banco de dados da oBoticário! 💚
-*** Este projeto foi desenvolvido com foco em melhorar a integridade, consistência
-*** e escalabilidade dos dados da aplicação. Desde a adição de restrições importantes,
-*** como UNIQUE e CHECK, até a normalização completa de tabelas, como Endereços e Vendas,
-*** cada detalhe foi cuidadosamente ajustado para garantir um sistema robusto e confiável.
-***
-*** Se você tiver sugestões, dúvidas ou quiser contribuir, fique à vontade.
-***
-*** Obrigado novamente! Agora é hora de explorar um banco de dados mais limpo, seguro e eficiente! 🚀
+***Obrigado por visitar o repositório do Prontus! 💚
+  ***Este projeto foi desenvolvido com o objetivo de criar um sistema web robusto e eficiente, utilizando Java (Spring Boot) no backend e Node.js (React) no frontend. Através de uma arquitetura bem definida, com integração com bancos de dados como PostgreSQL, buscamos oferecer uma solução escalável e confiável para a gestão de dados.
+  ***Se você tiver sugestões, dúvidas ou quiser contribuir com melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+  ***Obrigado novamente! Agora é hora de explorar o Prontus e aproveitar um sistema completo e eficiente! 🚀
 -->
 
 <!--LOGO -->
@@ -227,63 +222,97 @@ Todos os perfis iniciam o uso do sistema acessando a tela de **Login** com seu u
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
----
 
-### Instalação
-
-- Link de instalação do [Visual Studio Code](https://code.visualstudio.com) <br>
-- Link de instalação do [Mysql](https://www.mysql.com)<br>
-- Link de instalação do [SpringBoot](https://spring.io/projects/spring-boot)<br>
-- Link de instalação do [Swagger](https://swagger.io)<br>
-
-`Para instalar a extensão do java no Visual Studio Code, siga as instruções abaixo: `
-1. Copie o link e insira o link no navegador : vscode:extension/vscjava.vscode-java-pack
-  ![alt text](imagens/image.png)
-
-2. Apos inserir o link clique na opção `Abrir Visual Studio Code`:
-  ![alt text](imagens/image-2.png)
-
-3. Em seguida irá abrir uma tela contendo as informações do pacote e em seguida é só clicar em install:
-  ![alt text](imagens/image-4.png)
-
-4. Ou também podem instalar direto pelo VS Code, clicando no ícone de extensões e digitando o nome da extensão desejada, que no nosso caso é a Extension Pack for java:
-  ![alt text](imagens/image-5.png)
-
-<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
 <!-- Uso -->
 ## 🚀 Como Executar o Projeto
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Sistema web com backend em Java (Spring Boot) e frontend em Node.js. Este guia explica como instalar, configurar e executar o projeto localmente.
 
-Instruções passo a passo para executar o projeto localmente.
+## 🛠 Instalação de Ferramentas
 
-Clone o repositório:
+Antes de iniciar o desenvolvimento, você deve instalar as seguintes ferramentas:
 
-`git clone https://github.com/usuario/nome-do-projeto.git` <br>
+- [Visual Studio Code](https://code.visualstudio.com) – Editor recomendado
+- [MySQL](https://www.mysql.com) – Banco de dados alternativo
+- [PostgreSQL (recomendado)](https://www.postgresql.org) – Banco de dados principal
+- [Spring Boot](https://spring.io/projects/spring-boot) – Framework backend
+- [Swagger](https://swagger.io) – Para documentação e testes de APIs
 
-Navegue até o diretório do projeto:
+### 🔌 Extensões do VS Code (Java)
 
-`cd nome-do-projeto`
+Para trabalhar com Java no VS Code, é necessário instalar o pacote `Extension Pack for Java`. Siga os passos abaixo:
 
-Instale as dependências:
+1. Copie e cole o seguinte link no navegador:  
+   `vscode:extension/vscjava.vscode-java-pack`  
+   ![extensão java](imagens/image.png)
 
-`npm install`
+2. Clique na opção `Abrir Visual Studio Code`:  
+   ![abrir vscode](imagens/image-2.png)
 
-Inicie a aplicação:
+3. Instale o pacote clicando em `Install`:  
+   ![instalar pacote](imagens/image-4.png)
 
-`npm start`
+4. Alternativamente, abra o VS Code, vá até o ícone de extensões e pesquise por **"Extension Pack for Java"**:  
+   ![pesquisar extensão](imagens/image-5.png)
 
-Acesse no navegador:
+---
 
-`http://localhost:3000`
+## ✅ Requisitos Técnicos
+
+### 🔧 Backend (Java):
+- **Java 17+** – [Instalar JDK](https://adoptium.net/)
+- **Maven 3.8+** – [Instalar Maven](https://maven.apache.org/install.html)
+
+### 💻 Frontend (Node.js):
+- **Node.js 16+ e npm** – [Instalar Node.js](https://nodejs.org/)
+
+### 🗄️ Banco de Dados:
+- **PostgreSQL** (recomendado – versão 13+)
+  - Configure um banco e ajuste os dados de conexão em `backend/Prontus/src/main/resources/application.properties`.
+
+---
+
+## Rodando o Projeto
+Siga os passos abaixo para rodar o projeto Prontus na sua máquina:
+
+Clonar o repositório
+
+Primeiro, clone o repositório para o seu computador. Abra o terminal e execute o comando apropriado para clonar o repositório.
+
+Rodar o backend (Java + Spring Boot)
+
+Vá até o diretório do backend do projeto.
+
+Instale as dependências do projeto usando o Maven e inicie a aplicação.
+
+O backend ficará disponível em http://localhost:8080.
+
+Rodar o frontend (Node.js + React)
+
+Abra um novo terminal e vá até o diretório do frontend.
+
+Instale as dependências do frontend e, em seguida, inicie o servidor do frontend.
+
+O frontend será aberto em http://localhost:3000 no seu navegador.
+
+### ⚠️ Importante: 
+O backend precisa estar rodando antes de abrir o frontend, pois o frontend depende da API do backend para funcionar corretamente.
+
+### 🚫 Possíveis erros e soluções
+Cannot connect to database → Verifique se o PostgreSQL está em execução e se as credenciais estão corretas.
+
+JAVA_HOME not set → Adicione a variável de ambiente JAVA_HOME com o caminho do JDK.
+
+npm: command not found → Verifique se o Node.js está instalado corretamente.
+
+Failed to fetch no frontend → Confirme se o backend está ativo em localhost:8080.
 
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
 ## 🤝 Contribuições
-
-Explique como outros desenvolvedores podem contribuir para o projeto.
+Para contribuir com o projeto
 
 Fork este repositório. <br>
 Crie uma branch: git checkout -b minha-nova-funcionalidade. <br>
@@ -351,7 +380,7 @@ Isaac Adrian - [@isaac_souzzz](https://www.instagram.com/isaac_souzzz/)
 
 João Lucas - [@joaolucasgym](https://www.instagram.com/joaolucasgym/)
 
-Project Link: [https://github.com/Maarzano/oBoticario-db](https://github.com/Maarzano/oBoticario-db)
+Project Link: [https://github.com/Maarzano/Prontus](https://github.com/Maarzano/Prontus)
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
