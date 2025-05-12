@@ -11,8 +11,11 @@
 <br />
 <div align="center">
 <a href="https://github.com/github_username/REPO">
-    <img src="imagens/logoProntus.png" alt="Logo" width="300" height="300">
+    <img src="imagens/PRONTUS.jpg" alt="Logo" width="240" height="200">
   </a>
+
+<h3 align="center">Prontus</h3>
+
   <p align="center">
     <br />
   </p>
@@ -28,22 +31,13 @@
       <a href="#sobre-o-projeto">Sobre o projeto</a>
     </li>
     <li>
-      <a href="#-workflow-de-trabalho-git-github-merge-de-branches">Workflow de Trabalho</a>
+      <a href="#-arquitetura-do-projeto">Arquitetura do Projeto</a>
     </li>
     <li>
-      <a href="#-back-end">Back-end</a>
+      <a href="#-workflow-de-desenvolvimento">Workflow de Desenvolvimento</a>
     </li>
     <li>
-      <a href="#-front-end">Front-end</a>
-    </li>
-    <li>
-      <a href="#-manual-do-usuário">Manual do Usuario</a>
-    </li>
-    <li>
-      <a href="#-como-executar-o-projeto">Como executar o projeto</a>
-    </li>
-    <li>
-      <a href="#-contribuições">Contribuições</a>
+      <a href="#historico-de-alterações">Historico de alterações</a>
     </li>
     <li>
       <a href="#integrantes">Integrantes</a>
@@ -123,7 +117,7 @@ Para manter a qualidade do código e incentivar a colaboração entre a equipe, 
 
 ---
 
-### 🔧 Back-end
+### 🔧 Back-end Verificar!!!!
 
 - Desenvolvimento da API REST com Java e Spring.
 - Implementação do cadastro e autenticação de usuários (médicos e pacientes).
@@ -134,7 +128,7 @@ Para manter a qualidade do código e incentivar a colaboração entre a equipe, 
 
 ---
 
-### 🎨 Front-end
+### 🎨 Front-end Verificar!!!!
 
 - Construção das telas de login, cadastro e navegação principal utilizando JavaFX e Scene Builder.
 - Implementação da interface da agenda para marcação e visualização de horários disponíveis.
@@ -231,17 +225,16 @@ Todos os perfis iniciam o uso do sistema acessando a tela de **Login** com seu u
 
 
 <!-- Uso -->
-## 🚀 Como Executar o Projeto
+# 🚀 Como Executar o Projeto
 
-Sistema web com backend em Java (Spring Boot) e frontend em Node.js. Este guia explica como instalar, configurar e executar o projeto localmente.
+Este guia explica como instalar, configurar e executar o projeto localmente.
 
 ## 🛠 Instalação de Ferramentas
 
 Antes de iniciar o desenvolvimento, você deve instalar as seguintes ferramentas:
 
 - [Visual Studio Code](https://code.visualstudio.com) – Editor recomendado
-- [MySQL](https://www.mysql.com) – Banco de dados alternativo
-- [PostgreSQL (recomendado)](https://www.postgresql.org) – Banco de dados principal
+- [MySQL](https://www.mysql.com) – Banco de dados 
 - [Spring Boot](https://spring.io/projects/spring-boot) – Framework backend
 - [Swagger](https://swagger.io) – Para documentação e testes de APIs
 
@@ -251,17 +244,12 @@ Para trabalhar com Java no VS Code, é necessário instalar o pacote `Extension 
 
 1. Copie e cole o seguinte link no navegador:  
    `vscode:extension/vscjava.vscode-java-pack`  
-   ![extensão java](imagens/image.png)
 
-2. Clique na opção `Abrir Visual Studio Code`:  
-   ![abrir vscode](imagens/image-2.png)
+2. Clique na opção `Abrir Visual Studio Code`
 
 3. Instale o pacote clicando em `Install`:  
-   ![instalar pacote](imagens/image-4.png)
 
-4. Alternativamente, abra o VS Code, vá até o ícone de extensões e pesquise por **"Extension Pack for Java"**:  
-   ![pesquisar extensão](imagens/image-5.png)
-
+4. Alternativamente, abra o VS Code, vá até o ícone de extensões e pesquise por **"Extension Pack for Java"**
 
 ## ✅ Requisitos Técnicos
 
@@ -269,11 +257,13 @@ Para trabalhar com Java no VS Code, é necessário instalar o pacote `Extension 
 - **Java 17+** – [Instalar JDK](https://adoptium.net/)
 - **Maven 3.8+** – [Instalar Maven](https://maven.apache.org/install.html)
 
-### 💻 Frontend (Node.js):
-- **Node.js 16+ e npm** – [Instalar Node.js](https://nodejs.org/)
+### 💻 Frontend (SceneBuilder & JavaFX):
+- **SceneBuilder & JavaFX** <br>
+[Instalar SceneBuilder](https://gluonhq.com/products/scene-builder/)<br>
+[Instalar Java FX](https://openjfx.io/) 
 
 ### 🗄️ Banco de Dados:
-- **PostgreSQL** (recomendado – versão 13+)
+- **MySQL**
   - Configure um banco e ajuste os dados de conexão em `backend/Prontus/src/main/resources/application.properties`.
 
 
@@ -285,39 +275,34 @@ Clonar o repositório
 
 Primeiro, clone o repositório para o seu computador. Abra o terminal e execute o comando apropriado para clonar o repositório.
 
-Rodar o backend (Java + Spring Boot)
+Rodar o backend (Java)
 
 Vá até o diretório do backend do projeto.
 
 Instale as dependências do projeto usando o Maven e inicie a aplicação.
 
-O backend ficará disponível em http://localhost:8080.
 
-Rodar o frontend (Node.js + React)
+Rodar o frontend (Scene Builder)
 
 Abra um novo terminal e vá até o diretório do frontend.
 
 Instale as dependências do frontend e, em seguida, inicie o servidor do frontend.
 
-O frontend será aberto em http://localhost:3000 no seu navegador.
 
 ### ⚠️ Importante: 
 O backend precisa estar rodando antes de abrir o frontend, pois o frontend depende da API do backend para funcionar corretamente.
 
 ### 🚫 Possíveis erros e soluções
-Cannot connect to database → Verifique se o PostgreSQL está em execução e se as credenciais estão corretas.
 
 JAVA_HOME not set → Adicione a variável de ambiente JAVA_HOME com o caminho do JDK.
 
-npm: command not found → Verifique se o Node.js está instalado corretamente.
-
-Failed to fetch no frontend → Confirme se o backend está ativo em localhost:8080.
+npm: command not found → Verifique se o JavaFX está instalado corretamente.
 
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
 ## 🤝 Contribuições
-Para contribuir com o projeto
+Para contribuir com o projeto:
 
 Fork este repositório. <br>
 Crie uma branch: git checkout -b minha-nova-funcionalidade. <br>
@@ -350,7 +335,7 @@ A colaboração entre as diferentes áreas foi essencial para transformar ideias
 ### Desenvolvedores:
 
 <a href="https://github.com/Maarzano/oBoticario-db/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Maarzano/Prontus" />
+  <img src="https://contrib.rocks/image?repo=Maarzano/oBoticario-db" />
 </a>
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
@@ -377,7 +362,7 @@ Gabriel Arthur - [@gbriel.js](https://www.instagram.com/gbriel.js/) - gbl48287@g
 
 Arthur Araújo - [@marzan.0](https://www.instagram.com/marzan.0/) - arthuramarzano10@gmail.com
 
-Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/) - alves2araujo@gmail.com
+Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/)
 
 Bernardo Braga - [@bragaxz9](https://www.instagram.com/bragaxz9/)
 
