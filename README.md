@@ -377,7 +377,7 @@ Gabriel Arthur - [@gbriel.js](https://www.instagram.com/gbriel.js/) - gbl48287@g
 
 Arthur Araújo - [@marzan.0](https://www.instagram.com/marzan.0/) - arthuramarzano10@gmail.com
 
-Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/)
+Arthur Augusto - [@arthur__alves06](https://www.instagram.com/arthur__alves06/) - alves2araujo@gmail.com
 
 Bernardo Braga - [@bragaxz9](https://www.instagram.com/bragaxz9/)
 
