@@ -30,13 +30,10 @@
       <a href="#sobre-o-projeto">Sobre o projeto</a>
     </li>
     <li>
-      <a href="#-arquitetura-do-projeto">Arquitetura do Projeto</a>
-    </li>
-    <li>
       <a href="#-workflow-de-desenvolvimento">Workflow de Desenvolvimento</a>
     </li>
     <li>
-      <a href="#historico-de-alterações">Historico de alterações</a>
+      <a href="#manual-do-usuário">Manual do Usuário</a>
     </li>
     <li>
       <a href="#integrantes">Integrantes</a>
