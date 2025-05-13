@@ -33,7 +33,7 @@
       <a href="#-workflow-de-desenvolvimento">Workflow de Desenvolvimento</a>
     </li>
     <li>
-      <a href="#manual-do-usuário">Manual do Usuário</a>
+      <a href="#-manual-do-usuário">Manual do Usuário</a>
     </li>
     <li>
       <a href="#integrantes">Integrantes</a>
