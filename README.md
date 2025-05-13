@@ -291,12 +291,6 @@ Instale as dependências do frontend e, em seguida, inicie o servidor do fronten
 ### ⚠️ Importante: 
 O backend precisa estar rodando antes de abrir o frontend, pois o frontend depende da API do backend para funcionar corretamente.
 
-### 🚫 Possíveis erros e soluções
-
-JAVA_HOME not set → Adicione a variável de ambiente JAVA_HOME com o caminho do JDK.
-
-npm: command not found → Verifique se o JavaFX está instalado corretamente.
-
 
 <p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
 
