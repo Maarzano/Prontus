@@ -38,7 +38,12 @@ public class App extends Application {
     }
 
     public static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/inodev/" + fxml + ".fxml"));
+        var resource = App.class.getResource("/inodev/" + fxml + ".fxml");
+        if (resource == null) {
+            System.err.println("FXML file not found: /inodev/" + fxml + ".fxml");
+            throw new IOException("FXML file not found: /inodev/" + fxml + ".fxml");
+        }
+        FXMLLoader fxmlLoader = new FXMLLoader(resource);
         Parent root = fxmlLoader.load();
         return root;
     }
